@@ -46,6 +46,7 @@
             <button class="tab-btn" data-tab="activities" id="tab-btn-activities">🏔️ Activities</button>
             <button class="tab-btn" data-tab="wildlife" id="tab-btn-wildlife">🐦 Wildlife</button>
             <button class="tab-btn" data-tab="campsite" id="tab-btn-campsite">🏕️ Campsite</button>
+            <button class="tab-btn" data-tab="rv" id="tab-btn-rv">🚌 Our RV</button>
             <button class="tab-btn" data-tab="explore" id="tab-btn-explore">📷 Explore</button>
             <button class="tab-btn" data-tab="tips" id="tab-btn-tips">💡 Pro Tips</button>
         </div>
@@ -523,6 +524,23 @@
                     </div>
                 </div>
 
+                <div class="wifi-block">
+                    <h3>📶 KOA WiFi Credentials</h3>
+                    <div class="wifi-grid">
+                        <div class="wifi-card">
+                            <div class="wifi-label">Network Name</div>
+                            <div class="wifi-value" id="wifi-ssid">KOA GUEST</div>
+                            <button class="copy-btn" onclick="copyToClipboard('KOA GUEST', this)">Copy</button>
+                        </div>
+                        <div class="wifi-card">
+                            <div class="wifi-label">Password</div>
+                            <div class="wifi-value" id="wifi-pass">KOAOCEANSIDE</div>
+                            <button class="copy-btn" onclick="copyToClipboard('KOAOCEANSIDE', this)">Copy</button>
+                        </div>
+                    </div>
+                    <p class="wifi-note">📍 Valid at Bar Harbor / Oceanside KOA · June 8–12</p>
+                </div>
+
                 <div class="reservation-checklist">
                     <h3>📋 Reservation Checklist</h3>
                     <div class="checklist-item done">
@@ -554,6 +572,88 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===================== TAB: OUR RV ===================== -->
+        <section class="tab-panel" id="tab-rv">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>🚌 Our RV — 2025 Coachmen Freedom Express Select 29SE</h2>
+                    <p>35 ft · Sleeps 10 · 1 Slide-Out · Bunkhouse · Queen Bed · Fully Loaded</p>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="rv-gallery">
+                    <div class="rv-gallery-main">
+                        <img id="rv-main-img" src="assets/rv_ext.webp" alt="RV Exterior" class="rv-main-photo">
+                        <div class="rv-gallery-caption" id="rv-main-caption">Exterior — 2025 Coachmen Freedom Express Select 29SE</div>
+                    </div>
+                    <div class="rv-thumbs">
+                        <img src="assets/rv_ext.webp"       alt="Exterior"   class="rv-thumb active" data-caption="Exterior — 2025 Coachmen Freedom Express Select 29SE" onclick="setRvMain(this)">
+                        <img src="assets/rv_kitchen.webp"   alt="Kitchen"    class="rv-thumb"        data-caption="Kitchen &amp; Dinette Area" onclick="setRvMain(this)">
+                        <img src="assets/rv_living.webp"    alt="Living"     class="rv-thumb"        data-caption="Living Area with Slide-Out Sofa" onclick="setRvMain(this)">
+                        <img src="assets/rv_storage.webp"   alt="Storage"    class="rv-thumb"        data-caption="Bedroom Storage &amp; Closet" onclick="setRvMain(this)">
+                        <img src="assets/rv_bedroom.webp"   alt="Bedroom"    class="rv-thumb"        data-caption="Master Bedroom — 60" x 80" Queen Mattress" onclick="setRvMain(this)">
+                        <img src="assets/rv_bunkhouse.webp" alt="Bunkhouse"  class="rv-thumb"        data-caption="Bunkhouse — Double Bunks for the Kids" onclick="setRvMain(this)">
+                    </div>
+                </div>
+
+                <!-- Floorplan -->
+                <div class="rv-floorplan-block">
+                    <h3>📐 Floorplan</h3>
+                    <div class="rv-floorplan-wrap">
+                        <img src="assets/rv_floorplan.webp" alt="29SE Floorplan" class="rv-floorplan-img">
+                    </div>
+                    <p class="rv-floorplan-note">Queen bed up front · Slide-out sofa &amp; U-dinette · Full bath · Rear double bunkhouse · Pass-thru storage · 16 ft awning</p>
+                </div>
+
+                <!-- Video + 3D Tour -->
+                <div class="rv-tours">
+                    <div class="rv-tour-card">
+                        <h3>🎬 Video Walkthrough</h3>
+                        <p>Official factory walkthrough of our exact floorplan — see every room in action.</p>
+                        <div class="rv-video-embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/Vv_KD_KDQU8"
+                                title="2025 Coachmen Freedom Express Select 29SE Walkthrough"
+                                frameborder="0" allowfullscreen
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="rv-tour-card">
+                        <h3>🏠 Interactive 3D Tour</h3>
+                        <p>Walk through every inch of the 29SE in Matterport's immersive 3D space explorer.</p>
+                        <div class="rv-video-embed">
+                            <iframe
+                                src="https://my.matterport.com/show/?m=wiJzb2ayqVu"
+                                title="Coachmen 29SE 3D Interior Tour"
+                                frameborder="0" allowfullscreen
+                                allow="xr-spatial-tracking">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs -->
+                <div class="rv-specs">
+                    <h3>⚙️ Key Specs</h3>
+                    <div class="info-cards">
+                        <div class="info-card"><div class="info-icon">📏</div><h4>Length</h4><p>35 ft · 11 ft tall · 81" interior height</p></div>
+                        <div class="info-card"><div class="info-icon">🛏️</div><h4>Sleeping</h4><p>Sleeps 10 · Queen bed + 2 double bunks + sofa</p></div>
+                        <div class="info-card"><div class="info-icon">⚡</div><h4>Power</h4><p>50 amp · 200W solar + 30A controller · Inverter prep</p></div>
+                        <div class="info-card"><div class="info-icon">❄️</div><h4>Climate</h4><p>GE 15,000 BTU A/C · Ducted furnace · Tankless water heater</p></div>
+                        <div class="info-card"><div class="info-icon">📺</div><h4>Entertainment</h4><p>40" Smart TV · BT indoor &amp; outdoor speakers · USB ports</p></div>
+                        <div class="info-card"><div class="info-icon">🔗</div><h4>Links</h4>
+                            <p>
+                                <a href="https://rvshare.com/rvs/details/1764845" target="_blank" class="btn btn-sm">RVShare Listing →</a>
+                                <a href="https://coachmenrv.com/freedom-express-select/29SE/13017" target="_blank" class="btn btn-sm" style="margin-top:8px">Manufacturer Page →</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

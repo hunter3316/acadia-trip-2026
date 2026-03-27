@@ -136,4 +136,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // ===================== RV GALLERY THUMBNAIL SWITCHER =====================
+    window.setRvMain = function(thumb) {
+        const mainImg = document.getElementById('rv-main-img');
+        const caption = document.getElementById('rv-main-caption');
+        if (!mainImg) return;
+        mainImg.style.opacity = '0';
+        setTimeout(() => {
+            mainImg.src = thumb.src;
+            mainImg.alt = thumb.alt;
+            if (caption) caption.textContent = thumb.dataset.caption || thumb.alt;
+            mainImg.style.opacity = '1';
+        }, 200);
+        document.querySelectorAll('.rv-thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+    };
+
+    // ===================== COPY TO CLIPBOARD =====================
+    window.copyToClipboard = function(text, btn) {
+        navigator.clipboard.writeText(text).then(() => {
+            btn.textContent = '✓ Copied!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = 'Copy';
+                btn.classList.remove('copied');
+            }, 2000);
+        }).catch(() => {
+            btn.textContent = 'Error';
+            setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+        });
+    };
+
 });
