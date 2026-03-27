@@ -1,7 +1,7 @@
 // Simple Intersection Observer to fade in timeline events as they scroll into view
 document.addEventListener("DOMContentLoaded", () => {
     // Passcode Logic
-    const CORRECT_CODE = "2026";
+    const CORRECT_CODE = "3316";
     const overlay = document.getElementById('passcode-overlay');
     const input = document.getElementById('passcode-input');
     const errorMsg = document.getElementById('passcode-error');
