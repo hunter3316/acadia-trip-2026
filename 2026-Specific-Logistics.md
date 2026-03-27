@@ -1,6 +1,10 @@
 # 2026 Acadia & Vermont Trip - Specific Logistics & Timings
 
-This document supplements the main research with dates and timings specifically targeted for **June 6 - June 21, 2026**.
+This document supplements the main research with dates and timings specifically targeted for **June 6 - June 20, 2026**.
+
+**RV Information (Booked):**
+*   2025 Coachmen RV Freedom Express Select 29SE (Pickup June 6, 4:00 PM @ Wilton, NY)
+*   [Brochure](https://coachmenrv.com/freedom-express-select/29SE/13017) | [RV Share Listing](https://rvshare.com/rvs/details/1764845)
 
 ## 1. Important 2026 Dates & Events
 
@@ -22,7 +26,7 @@ Tides shift by about 50 minutes each day. On the opening weekend of your trip (J
 
 ## 4. Reservation Timeline Checkpoints
 
-To execute this 2026 trip successfully, your primary booking deadline is **December 1, 2025 at 10:00 AM EST**:
-1.  **Schoodic Woods B-Loop (If choosing this base camp):** Must book precisely on Dec 1, 2025.
-2.  **KOA Bar Harbor / Oceanside:** Private bookings open roughly 11-12 months in advance. You should book this for June 2026 as early as **July/August 2025**.
+To execute this 2026 trip successfully, your primary booking deadlines are:
+1.  **KOA Bar Harbor / Oceanside:** ✅ **BOOKED!** (June 8 - June 12, Site Oceans Edge, Res #21555510)
+2.  **Schoodic Woods B-Loop (If choosing for mid-to-late June):** Must book precisely on Dec 1, 2025.
 3.  **Cadillac Summit Vehicle Reservation:** 30% of tickets open 90 days out (March 2026). The remaining 70% open 2 days before the ascent at 10:00 AM EST.
