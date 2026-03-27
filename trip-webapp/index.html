@@ -9,7 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="locked">
+    <!-- Passcode Overlay -->
+    <div id="passcode-overlay">
+        <div class="passcode-content">
+            <div class="lock-icon">🔒</div>
+            <h2>Private Itinerary</h2>
+            <p>Please enter the 4-digit access code</p>
+            <div class="passcode-input-container">
+                <input type="password" id="passcode-input" maxlength="4" placeholder="••••" autofocus>
+            </div>
+            <div id="passcode-error">Incorrect code. Try again.</div>
+        </div>
+    </div>
+
     <header class="hero">
         <div class="hero-bg" style="background-image: url('assets/acadia.png');"></div>
         <div class="hero-overlay"></div>
