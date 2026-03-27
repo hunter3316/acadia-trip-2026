@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smith Family Vacation: Cady Hill & Acadia</title>
+    <title>Smith Family Vacation: Cady Hill & Acadia 2026</title>
+    <meta name="description" content="Smith Family private trip planner for the 2026 Acadia & Vermont vacation.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="locked">
+
     <!-- Passcode Overlay -->
     <div id="passcode-overlay">
         <div class="passcode-content">
@@ -23,129 +25,666 @@
         </div>
     </div>
 
+    <!-- Hero -->
     <header class="hero">
         <div class="hero-bg" style="background-image: url('assets/acadia.png');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <div class="hero-badge">June 6 – 20 · 2026</div>
             <h1>Smith Family Vacation</h1>
-            <h2>Cady Hill & Acadia</h2>
-            <div class="hero-dates">June 6 - June 20, 2026</div>
+            <h2>Cady Hill & Acadia National Park</h2>
+            <p class="hero-sub">6 people · 1 golden retriever · 1 epic RV adventure</p>
         </div>
-        <div class="scroll-indicator">↓</div>
+        <div class="scroll-indicator" id="scroll-down">↓</div>
     </header>
 
-    <main class="timeline-container">
-        
-        <!-- Checkpoint 1: RV Pickup & Cady Hill -->
-        <div class="timeline-event verified">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">June 6-7</div>
-            <div class="timeline-card">
-               <div class="card-bg" style="background-image: url('assets/vermont.png')"></div>
-               <div class="card-glass">
-                   <h3>The Vermont Intercept</h3>
-                   <p class="subtitle">RV Pickup & Basecamp in Cady Hill / Cambridge</p>
-                   <details>
-                       <summary>Logistics & Details</summary>
-                       <div class="details-content">
-                           <p><strong>Pickup Date:</strong> Saturday, June 6 @ 4:00 PM</p>
-                           <p><strong>Location:</strong> Brandon's XL Bunkhouse<br>13 Burnham Rd, Wilton, NY 12831</p>
-                           <p><strong>RV Model:</strong> 2025 Coachmen Freedom Express Select 29SE</p>
-                           <p><strong>Action:</strong> Tow north to Cambridge, VT and set up basecamp in the meadow. Rest day on June 7.</p>
-                           <a href="https://rvshare.com/rvs/details/1764845" target="_blank" class="btn">View RV Listing</a>
-                       </div>
-                   </details>
-               </div>
-            </div>
+    <!-- Tab Navigation -->
+    <nav class="tab-nav" id="tab-nav">
+        <div class="tab-nav-inner">
+            <button class="tab-btn active" data-tab="itinerary" id="tab-btn-itinerary">🗓️ Itinerary</button>
+            <button class="tab-btn" data-tab="route" id="tab-btn-route">🗺️ Route</button>
+            <button class="tab-btn" data-tab="activities" id="tab-btn-activities">🏔️ Activities</button>
+            <button class="tab-btn" data-tab="wildlife" id="tab-btn-wildlife">🐦 Wildlife</button>
+            <button class="tab-btn" data-tab="campsite" id="tab-btn-campsite">🏕️ Campsite</button>
+            <button class="tab-btn" data-tab="explore" id="tab-btn-explore">📷 Explore</button>
+            <button class="tab-btn" data-tab="tips" id="tab-btn-tips">💡 Pro Tips</button>
         </div>
+    </nav>
 
-        <!-- Checkpoint 2: Acadia KOA -->
-        <div class="timeline-event verified">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">June 8-12</div>
-            <div class="timeline-card">
-               <div class="card-bg" style="background-image: url('assets/acadia.png')"></div>
-               <div class="card-glass">
-                   <h3>Acadia Coastline</h3>
-                   <p class="subtitle">Bar Harbor Oceanside KOA</p>
-                   <details>
-                       <summary>Logistics & Details</summary>
-                       <div class="details-content">
-                           <p><strong>Check-in:</strong> Monday, June 8 @ 3:00 PM</p>
-                           <p><strong>Check-out:</strong> Friday, June 12 @ 11:00 AM</p>
-                           <p><strong>Reservation:</strong> #21555510</p>
-                           <p><strong>Site:</strong> Oceans Edge (Back In, 30/20 Amps, Water/Electric)</p>
-                           <p><strong>Plans:</strong> Sunrise on Cadillac Mountain, Puffin Lighthouse Cruises, and tide pooling on Wonderland Trail.</p>
-                       </div>
-                   </details>
-               </div>
-            </div>
-        </div>
+    <main class="tab-content-wrapper">
 
-        <!-- Checkpoint 3: TBD Block -->
-        <div class="timeline-event tbd">
-            <div class="timeline-dot warning"></div>
-            <div class="timeline-date">June 12-20</div>
-            <div class="timeline-card">
-               <div class="card-bg" style="background-image: url('assets/moosehead.png')"></div>
-               <div class="card-glass">
-                   <h3 class="tbd-title">The Unplanned Adventure</h3>
-                   <p class="subtitle">We have 8 whole days to allocate! Here are the options:</p>
-                   
-                   <div class="options-container">
-                       <details class="option">
-                           <summary>Option A: Cliff-View Coastal Extension</summary>
-                           <div class="details-content">
-                               <p>Relocate to a quieter campground with cliff views, less crowds, and darker skies.</p>
-                               <p><strong>Potential Sites:</strong></p>
-                               <ul>
-                                   <li>Bar Harbor Campground (Modern America)</li>
-                                   <li>West Bay Acadia - great for stargazing and wildlife</li>
-                               </ul>
-                           </div>
-                       </details>
-                       <details class="option">
-                           <summary>Option B: Moosehead Lake Side-Quest</summary>
-                           <div class="details-content">
-                               <p>Drive inland to the stunning Moosehead Lake region for 1-2 days specifically dedicated to spotting moose in the wild and enjoying the dense pine forests.</p>
-                           </div>
-                       </details>
-                       <details class="option">
-                           <summary>Option C: Return to the Meadow</summary>
-                           <div class="details-content">
-                               <p>Pack up and return to Cambridge, VT. Rest in the meadow with family for the final days before the long drive home.</p>
-                           </div>
-                       </details>
-                   </div>
-               </div>
-            </div>
-        </div>
+        <!-- ===================== TAB: ITINERARY ===================== -->
+        <section class="tab-panel active" id="tab-itinerary">
+            <div class="timeline-container">
 
-        <!-- Checkpoint 4: The Journey Home -->
-        <div class="timeline-event verified">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">June 20</div>
-            <div class="timeline-card">
-               <div class="card-bg" style="background-color: #1a1a2e"></div>
-               <div class="card-glass">
-                   <h3>The Disconnect</h3>
-                   <p class="subtitle">RV Dropoff & Journey Home</p>
-                   <details>
-                       <summary>Logistics & Details</summary>
-                       <div class="details-content">
-                           <p><strong>Drop-off Date:</strong> Saturday, June 20 @ 11:00 AM</p>
-                           <p><strong>Location:</strong> 13 Burnham Rd, Wilton, NY</p>
-                           <p><strong>Action:</strong> Disconnect the trailer, return to Owner, and commute back down to WV in the Suburban.</p>
-                       </div>
-                   </details>
-               </div>
+                <div class="timeline-event verified">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 6–7</div>
+                    <div class="timeline-card">
+                        <div class="card-bg" style="background-image: url('assets/vermont.png')"></div>
+                        <div class="card-glass">
+                            <h3>The Vermont Intercept</h3>
+                            <p class="subtitle">RV Pickup & Basecamp in Cady Hill / Cambridge</p>
+                            <details>
+                                <summary>Logistics & Details</summary>
+                                <div class="details-content">
+                                    <p><strong>Pickup Date:</strong> Saturday, June 6 @ 4:00 PM</p>
+                                    <p><strong>Location:</strong> Brandon's XL Bunkhouse<br>13 Burnham Rd, Wilton, NY 12831</p>
+                                    <p><strong>RV Model:</strong> 2025 Coachmen Freedom Express Select 29SE</p>
+                                    <p><strong>Action:</strong> Tow north to Cambridge, VT and set up basecamp in Erica's family meadow. Rest day on June 7.</p>
+                                    <a href="https://rvshare.com/rvs/details/1764845" target="_blank" class="btn">View RV Listing</a>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-event verified">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 8–12</div>
+                    <div class="timeline-card">
+                        <div class="card-bg" style="background-image: url('assets/acadia.png')"></div>
+                        <div class="card-glass">
+                            <h3>Acadia Coastline</h3>
+                            <p class="subtitle">Bar Harbor Oceanside KOA — 4 nights</p>
+                            <details>
+                                <summary>Logistics & Details</summary>
+                                <div class="details-content">
+                                    <p><strong>Check-in:</strong> Monday, June 8 @ 3:00 PM</p>
+                                    <p><strong>Check-out:</strong> Friday, June 12 @ 11:00 AM</p>
+                                    <p><strong>Reservation:</strong> #21555510</p>
+                                    <p><strong>Site:</strong> Oceans Edge (Back In, 30/20 Amps, Water/Electric)</p>
+                                    <p><strong>Plans:</strong> Sunrise on Cadillac Mountain, Puffin Lighthouse Cruises, tide pooling on Wonderland Trail.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-event tbd">
+                    <div class="timeline-dot warning"></div>
+                    <div class="timeline-date">June 12–20</div>
+                    <div class="timeline-card">
+                        <div class="card-bg" style="background-image: url('assets/moosehead.png')"></div>
+                        <div class="card-glass">
+                            <h3 class="tbd-title">The Unplanned Adventure</h3>
+                            <p class="subtitle">8 days still to plan — here are the options:</p>
+                            <div class="options-container">
+                                <details class="option">
+                                    <summary>Option A: Cliff-View Coastal Extension</summary>
+                                    <div class="details-content">
+                                        <p>Relocate to a quieter campground with cliff views, less crowds, and darker skies.</p>
+                                        <p><strong>Potential Sites:</strong></p>
+                                        <ul>
+                                            <li>Bar Harbor Campground (Modern America)</li>
+                                            <li>West Bay Acadia — great for stargazing and wildlife</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                                <details class="option">
+                                    <summary>Option B: Moosehead Lake Side-Quest</summary>
+                                    <div class="details-content">
+                                        <p>Drive inland to stunning Moosehead Lake for 1–2 days dedicated to spotting moose in the wild and enjoying dense pine forests.</p>
+                                    </div>
+                                </details>
+                                <details class="option">
+                                    <summary>Option C: Return to the Meadow</summary>
+                                    <div class="details-content">
+                                        <p>Pack up and return to Cambridge, VT. Rest in the meadow with family for the final days before the long drive home.</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-event verified">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 20</div>
+                    <div class="timeline-card">
+                        <div class="card-bg" style="background-color: #1a1a2e"></div>
+                        <div class="card-glass">
+                            <h3>The Disconnect</h3>
+                            <p class="subtitle">RV Dropoff & Journey Home</p>
+                            <details>
+                                <summary>Logistics & Details</summary>
+                                <div class="details-content">
+                                    <p><strong>Drop-off Date:</strong> Saturday, June 20 @ 11:00 AM</p>
+                                    <p><strong>Location:</strong> 13 Burnham Rd, Wilton, NY</p>
+                                    <p><strong>Action:</strong> Disconnect the trailer, return to Owner, and commute back down to WV in the Suburban.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
+
+        <!-- ===================== TAB: ROUTE ===================== -->
+        <section class="tab-panel" id="tab-route">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>🗺️ Our Route</h2>
+                    <p>Morgantown, WV → Wilton, NY → Cambridge, VT → Acadia, ME → Home</p>
+                </div>
+
+                <div class="map-embed">
+                    <iframe
+                        title="Trip Route Map"
+                        src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&origin=Morgantown,WV&destination=Bar+Harbor,ME&waypoints=Wilton,NY|Cambridge,VT&mode=driving"
+                        width="100%" height="420" style="border:0; border-radius: 16px;" allowfullscreen loading="lazy">
+                    </iframe>
+                    <p class="map-fallback">📍 <a href="https://maps.google.com/maps/dir/Morgantown,WV/Wilton,NY+12831/Cambridge,VT/Bar+Harbor,ME" target="_blank">Open full route in Google Maps →</a></p>
+                </div>
+
+                <div class="route-stops">
+                    <div class="route-stop">
+                        <div class="stop-num">1</div>
+                        <div class="stop-info">
+                            <h4>Morgantown, WV</h4>
+                            <p>Home Base — Drive north to Wilton, NY (~6 hrs)</p>
+                        </div>
+                    </div>
+                    <div class="route-arrow">↓</div>
+                    <div class="route-stop">
+                        <div class="stop-num">2</div>
+                        <div class="stop-info">
+                            <h4>Wilton, NY — RV Pickup</h4>
+                            <p>June 6 @ 4:00 PM · Brandon's XL Bunkhouse · Hitch up the 2025 Coachmen 29SE</p>
+                        </div>
+                    </div>
+                    <div class="route-arrow">↓</div>
+                    <div class="route-stop">
+                        <div class="stop-num">3</div>
+                        <div class="stop-info">
+                            <h4>Cambridge, VT — Cady Hill Meadow</h4>
+                            <p>~1.5 hr tow from Wilton · Set up basecamp at Erica's family property · Rest day June 7</p>
+                        </div>
+                    </div>
+                    <div class="route-arrow">↓</div>
+                    <div class="route-stop stop-accent">
+                        <div class="stop-num">4</div>
+                        <div class="stop-info">
+                            <h4>Bar Harbor, ME — Acadia National Park</h4>
+                            <p>~5.5 hr tow from VT · June 8–12 at Oceanside KOA · The main event!</p>
+                        </div>
+                    </div>
+                    <div class="route-arrow">↓</div>
+                    <div class="route-stop stop-tbd">
+                        <div class="stop-num">?</div>
+                        <div class="stop-info">
+                            <h4>TBD — June 12–20</h4>
+                            <p>Coastal extension, Moosehead Lake, or return to VT meadow</p>
+                        </div>
+                    </div>
+                    <div class="route-arrow">↓</div>
+                    <div class="route-stop">
+                        <div class="stop-num">5</div>
+                        <div class="stop-info">
+                            <h4>Wilton, NY — RV Drop-off</h4>
+                            <p>June 20 @ 11:00 AM · Unhitch and drive the Suburban home to WV (~6 hrs)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">🚗</div>
+                        <h4>Tow Vehicle</h4>
+                        <p>2021 Chevy Suburban 4WD · 5.3L V8 · 8,100 lb tow capacity</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🚌</div>
+                        <h4>Island Explorer</h4>
+                        <p>Free shuttle bus covers all of MDI. Skip driving/parking once you're set up at the KOA!</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⛽</div>
+                        <h4>Fuel Tip</h4>
+                        <p>Budget extra for towing — a loaded trailer can cut fuel economy nearly in half on hilly Maine roads.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TAB: ACTIVITIES ===================== -->
+        <section class="tab-panel" id="tab-activities">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>🏔️ Top Things To Do in Acadia</h2>
+                    <p>Curated picks for a group of 6 with a 13-year-old and a golden retriever</p>
+                </div>
+
+                <div class="activity-grid">
+
+                    <div class="activity-card" style="background-image: url('assets/cadillac_sunrise.png')">
+                        <div class="activity-overlay">
+                            <div class="activity-tag">⭐ Must Do</div>
+                            <h3>Cadillac Mountain Sunrise</h3>
+                            <p>The highest peak on the US Atlantic coast. First sunrise in America — be there by 4:00 AM. Requires a $6 vehicle reservation (no RVs/trailers — unhitch the Suburban).</p>
+                            <div class="activity-meta">
+                                <span>🚗 Drive up</span>
+                                <span>🕓 ~4:00 AM arrival</span>
+                                <span>🐕 No dogs at summit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" style="background-image: url('assets/thunder_hole.png')">
+                        <div class="activity-overlay">
+                            <div class="activity-tag">🌊 Dramatic</div>
+                            <h3>Thunder Hole & Ocean Path</h3>
+                            <p>A 2-mile paved coastal path leading to Thunder Hole — a natural slot where waves crash with a booming sound. Best at high tide (± 3 ft). Pink granite cliffs are stunning for photos.</p>
+                            <div class="activity-meta">
+                                <span>🚶 Easy walk</span>
+                                <span>🐕 Dog friendly</span>
+                                <span>📷 Photo gold</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" style="background-image: url('assets/jordan_pond.png')">
+                        <div class="activity-overlay">
+                            <div class="activity-tag">🍞 Iconic</div>
+                            <h3>Jordan Pond & Popovers</h3>
+                            <p>Crystal-clear lake with The Bubble mountains reflected in it. The Jordan Pond House is famous for serving warm popovers with jam on the lawn — a beloved Acadia tradition.</p>
+                            <div class="activity-meta">
+                                <span>🚶 Easy loop</span>
+                                <span>🐕 Dog friendly</span>
+                                <span>🍽️ Lunch stop</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card img-fallback" style="background: linear-gradient(135deg, #1a3a4a, #0d2233);">
+                        <div class="activity-overlay">
+                            <div class="activity-span-icon">🏖️</div>
+                            <div class="activity-tag">🏖️ Beach Day</div>
+                            <h3>Sand Beach</h3>
+                            <p>One of the only sandy beaches in the park, nestled between granite cliffs. Water is cold (~55°F) but refreshing. Excellent for the 13-year-old! Note: Dogs are NOT allowed June 15 – Sept 8.</p>
+                            <div class="activity-meta">
+                                <span>🏊 Swimming</span>
+                                <span>⚠️ No dogs mid-June</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card img-fallback" style="background: linear-gradient(135deg, #2a1a3a, #150d22);">
+                        <div class="activity-overlay">
+                            <div class="activity-span-icon">🚴</div>
+                            <div class="activity-tag">🚴 Family Fun</div>
+                            <h3>Carriage Roads</h3>
+                            <p>45 miles of motor-free crushed gravel roads built by John D. Rockefeller Jr. Perfect for biking, walking, or even renting a horse-drawn carriage ride. Dog-friendly! Jaw-dropping stone bridges.</p>
+                            <div class="activity-meta">
+                                <span>🚲 Rent bikes locally</span>
+                                <span>🐕 Dog friendly</span>
+                                <span>👶 Kid friendly</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" style="background-image: url('assets/bass_harbor.png')">
+                        <div class="activity-overlay">
+                            <div class="activity-tag">🌅 Sunset</div>
+                            <h3>Bass Harbor Head Lighthouse</h3>
+                            <p>Maine's most iconic lighthouse, perched on dramatic sea cliffs on the "quiet side" of the island. Parking fills up fast — go at sunrise or mid-day to avoid the sunset crowd.</p>
+                            <div class="activity-meta">
+                                <span>🅿️ Very limited parking</span>
+                                <span>🌅 Go early!</span>
+                                <span>📷 Iconic shot</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card img-fallback" style="background: linear-gradient(135deg, #0d2e1a, #071a0f);">
+                        <div class="activity-overlay">
+                            <div class="activity-span-icon">🌊</div>
+                            <div class="activity-tag">🔬 Nature</div>
+                            <h3>Tide Pooling — Wonderland Trail</h3>
+                            <p>1.3-mile easy coastal trail leading to some of the best tide pools on the island. Find sea stars, crabs, and snails. Best 1.5 hrs before/after low tide. Dog friendly — wear grippy shoes!</p>
+                            <div class="activity-meta">
+                                <span>🐕 Dog friendly</span>
+                                <span>⏰ Check tide chart</span>
+                                <span>👶 Kid favorite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card img-fallback" style="background: linear-gradient(135deg, #2a2a0a, #1a1a05);">
+                        <div class="activity-overlay">
+                            <div class="activity-span-icon">🏔️</div>
+                            <div class="activity-tag">🥾 Hike</div>
+                            <h3>Gorham Mountain Trail</h3>
+                            <p>A family-friendly hike (1.8 miles round trip) with rewarding panoramic ocean views. A great alternative to the more intense Beehive. Summit is wide open — perfect for a picnic.</p>
+                            <div class="activity-meta">
+                                <span>🥾 Moderate</span>
+                                <span>🐕 Dog friendly</span>
+                                <span>🌊 Ocean views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card img-fallback" style="background: linear-gradient(135deg, #1a1a3a, #0d0d22);">
+                        <div class="activity-overlay">
+                            <div class="activity-span-icon">🌊</div>
+                            <div class="activity-tag">🌊 Unique</div>
+                            <h3>Bar Island at Low Tide</h3>
+                            <p>A gravel bar emerges at low tide, walkable from Bar Harbor town to Bar Island. Time-sensitive — the bar is only exposed for ~2 hours. Great for beachcombing and views of Frenchman Bay.</p>
+                            <div class="activity-meta">
+                                <span>⏰ Tide-dependent</span>
+                                <span>🐕 Dog friendly</span>
+                                <span>🗺️ From downtown</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TAB: WILDLIFE ===================== -->
+        <section class="tab-panel" id="tab-wildlife">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>🐦 Wildlife & Ocean Adventures</h2>
+                    <p>June is peak season — some of the best wildlife viewing of the year</p>
+                </div>
+
+                <div class="wildlife-hero">
+                    <img src="assets/puffin.png" alt="Puffin on Maine coast" class="wildlife-hero-img">
+                    <div class="wildlife-hero-text">
+                        <div class="badge green">Peak Season</div>
+                        <h3>Puffin & Lighthouse Cruise</h3>
+                        <p>June is peak puffin nesting season! These colorful seabirds can't be seen directly from shore, but Bar Harbor Whale Watch Co. runs daily 2.5–3 hour Puffin & Lighthouse cruises out of Bar Harbor. The cruise is the perfect length for leaving the dog comfortably in the RV's A/C.</p>
+                        <p><strong>Book early</strong> — early June spots (right after the Acadia Birding Festival) are highly sought after by photographers.</p>
+                        <a href="https://www.barharborwhales.com/lighthouse-cruises/puffin-lighthouse-cruise/" target="_blank" class="btn btn-accent">Book Puffin Cruise →</a>
+                    </div>
+                </div>
+
+                <div class="wildlife-grid">
+                    <div class="wildlife-card">
+                        <img src="assets/whale.png" alt="Whale breaching" class="wildlife-card-img">
+                        <div class="wildlife-card-body">
+                            <h4>🐋 Whale Watching</h4>
+                            <p>June is fantastic for whales! Humpback, minke, and finback whales are commonly spotted on cruises out of Bar Harbor. These often combine with the Puffin tours for an incredible day on the water.</p>
+                            <a href="https://www.barharborwhales.com/" target="_blank" class="btn btn-sm">View Tours</a>
+                        </div>
+                    </div>
+                    <div class="wildlife-card">
+                        <div class="wildlife-emoji-card">🦅</div>
+                        <div class="wildlife-card-body">
+                            <h4>🦅 Peregrine Falcons</h4>
+                            <p>Acadia hosts nesting peregrine falcons in June. The Precipice and Beehive trails may be closed during nesting season to protect sites. Rangers monitor and inform visitors — check daily.</p>
+                        </div>
+                    </div>
+                    <div class="wildlife-card">
+                        <div class="wildlife-emoji-card">🦞</div>
+                        <div class="wildlife-card-body">
+                            <h4>🦞 Tide Pools</h4>
+                            <p>Wonderland Trail & Ship Harbor are the best tide pool spots. Sea stars, hermit crabs, snails, and anemones are plentiful. Best at 1.5 hrs before and after low tide — check the chart daily.</p>
+                        </div>
+                    </div>
+                    <div class="wildlife-card">
+                        <div class="wildlife-emoji-card">🦌</div>
+                        <div class="wildlife-card-body">
+                            <h4>🦌 Moose Search</h4>
+                            <p>Moose are very rare on Mount Desert Island itself — they prefer inland northern Maine. For real moose spotting, plan the Moosehead Lake side-quest (Option B in the itinerary)!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timing-block">
+                    <h3>☀️ Photographer's Timing Guide</h3>
+                    <div class="timing-grid">
+                        <div class="timing-item">
+                            <div class="timing-time">~4:50 AM</div>
+                            <div class="timing-label">Sunrise (early June)</div>
+                            <div class="timing-desc">Arrive at Cadillac summit checkpoint by 4:00 AM to catch the "first light in the US"</div>
+                        </div>
+                        <div class="timing-item">
+                            <div class="timing-time">8:15–8:25 PM</div>
+                            <div class="timing-label">Sunset (early June)</div>
+                            <div class="timing-desc">Golden hour stretches over Otter Cliffs & Raven's Nest on the Schoodic Peninsula</div>
+                        </div>
+                        <div class="timing-item">
+                            <div class="timing-time">Low Tide ± 1.5 hrs</div>
+                            <div class="timing-label">Tide Pooling Window</div>
+                            <div class="timing-desc">Tides shift ~50 mins/day. Opening weekend low tide was ~8:30–9:30 AM</div>
+                        </div>
+                        <div class="timing-item">
+                            <div class="timing-time">High Tide</div>
+                            <div class="timing-label">Thunder Hole</div>
+                            <div class="timing-desc">Thunder Hole is most dramatic at high tide with a ±3 ft surge</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== TAB: CAMPSITE ===================== -->
+        <section class="tab-panel" id="tab-campsite">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>🏕️ Our Home Base</h2>
+                    <p>Bar Harbor / Oceanside KOA Holiday — already booked!</p>
+                </div>
+
+                <div class="campsite-hero">
+                    <img src="assets/koa.png" alt="KOA Campground oceanside" class="campsite-hero-img">
+                    <div class="campsite-status-badge">✅ BOOKED — Res. #21555510</div>
+                </div>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">📅</div>
+                        <h4>Check-in / Out</h4>
+                        <p>June 8 @ 3:00 PM → June 12 @ 11:00 AM<br>4 nights at Oceans Edge site</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h4>Site Hookups</h4>
+                        <p>Back-in site · 30/20 Amp Electric · Water included · Sewer on-site</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🌊</div>
+                        <h4>Ocean Access</h4>
+                        <p>Waterfront access with sweeping ocean views right from the campsite. West-facing for golden sunsets over the bay.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🐕</div>
+                        <h4>Dog Friendly</h4>
+                        <p>KOA is pet-friendly. Our retriever will love the waterfront access and nearby dog-friendly trails.</p>
+                    </div>
+                </div>
+
+                <div class="section-subheader">
+                    <h3>🔄 Backup Campsite Options</h3>
+                    <p>In case the KOA Oceans Edge site fills up for the extended stay</p>
+                </div>
+
+                <div class="backup-camps">
+                    <div class="backup-card">
+                        <h4>Mount Desert Narrows Camping Resort</h4>
+                        <p>On the island (MDI), just down Port Road from the KOA. Excellent waterfront sites, heated pool, and full hookups. Operated by Thousand Trails / RVontheGo.</p>
+                        <a href="https://www.rvonthego.com/maine/mount-desert-narrows-camping-resort/" target="_blank" class="btn btn-sm">View Site →</a>
+                    </div>
+                    <div class="backup-card">
+                        <h4>Narrows Too Camping Resort</h4>
+                        <p>Located in Trenton, directly across the bridge from Acadia. Big-rig friendly waterfront sites looking toward Mount Desert Island. Less congested than on-island options.</p>
+                        <a href="https://www.rvonthego.com/maine/narrows-too-camping-resort/" target="_blank" class="btn btn-sm">View Site →</a>
+                    </div>
+                    <div class="backup-card">
+                        <h4>Schoodic Woods (NPS)</h4>
+                        <p>On the quieter Schoodic Peninsula — 1h15m from Bar Harbor. Electric & water hookups. Raven's Nest overlook is incredible for astrophotography and sunset. Book via Recreation.gov.</p>
+                        <a href="https://www.recreation.gov/camping/campgrounds/251833" target="_blank" class="btn btn-sm">Check Availability →</a>
+                    </div>
+                </div>
+
+                <div class="reservation-checklist">
+                    <h3>📋 Reservation Checklist</h3>
+                    <div class="checklist-item done">
+                        <span class="check">✅</span>
+                        <div>
+                            <strong>KOA Bar Harbor / Oceanside</strong>
+                            <p>June 8–12 BOOKED — Res. #21555510 — Site: Oceans Edge</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item pending">
+                        <span class="check">⚠️</span>
+                        <div>
+                            <strong>Cadillac Summit Vehicle Reservation</strong>
+                            <p>Book on Recreation.gov — 30% open 90 days out (March 2026), 70% open 2 days prior at 10 AM EST</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item pending">
+                        <span class="check">⚠️</span>
+                        <div>
+                            <strong>Puffin & Whale Watch Tour</strong>
+                            <p>Book Bar Harbor Whale Watch Co. tickets now before early June spots sell out</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item pending">
+                        <span class="check">🗓️</span>
+                        <div>
+                            <strong>Schoodic Woods (Optional)</strong>
+                            <p>Set reminder for May 25, 2026 at 10:00 AM EST for the 14-day rolling release window</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TAB: EXPLORE ===================== -->
+        <section class="tab-panel" id="tab-explore">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>📷 Explore Acadia</h2>
+                    <p>A visual taste of what awaits — get excited!</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item tall">
+                        <img src="assets/cadillac_sunrise.png" alt="Cadillac Mountain Sunrise" loading="lazy">
+                        <div class="gallery-caption">Cadillac Mountain Sunrise — First Light in the US</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/acadia.png" alt="Acadia Coastline" loading="lazy">
+                        <div class="gallery-caption">Acadia's Iconic Pink Granite Coastline</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/thunder_hole.png" alt="Thunder Hole Waves" loading="lazy">
+                        <div class="gallery-caption">Thunder Hole — Waves Crashing at High Tide</div>
+                    </div>
+                    <div class="gallery-item tall">
+                        <img src="assets/bass_harbor.png" alt="Bass Harbor Lighthouse" loading="lazy">
+                        <div class="gallery-caption">Bass Harbor Head Lighthouse at Sunset</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/jordan_pond.png" alt="Jordan Pond" loading="lazy">
+                        <div class="gallery-caption">Jordan Pond — Crystal Clear Mountain Lake</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/puffin.png" alt="Atlantic Puffin" loading="lazy">
+                        <div class="gallery-caption">Atlantic Puffin — June Nesting Season</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/whale.png" alt="Whale Watching" loading="lazy">
+                        <div class="gallery-caption">Humpback Whale — Bar Harbor Waters</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/vermont.png" alt="Vermont Meadow" loading="lazy">
+                        <div class="gallery-caption">Cady Hill Meadow — Our Vermont Basecamp</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/moosehead.png" alt="Moosehead Lake" loading="lazy">
+                        <div class="gallery-caption">Moosehead Lake — The Wild Card Side-Quest</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TAB: PRO TIPS ===================== -->
+        <section class="tab-panel" id="tab-tips">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>💡 Pro Tips & Mistakes to Avoid</h2>
+                    <p>Hard-won research so we don't learn the hard way</p>
+                </div>
+
+                <div class="tips-grid">
+                    <div class="tip-card urgent">
+                        <div class="tip-num">01</div>
+                        <h4>Book Cadillac Mountain NOW</h4>
+                        <p>A $6 timed vehicle reservation is <strong>required</strong> from late May to late October. Do NOT assume you can just drive up. 30% of tickets open 90 days out, 70% open 2 days before at 10 AM EST on Recreation.gov.</p>
+                        <a href="https://www.recreation.gov/timed-entry/10086372" target="_blank" class="btn btn-sm">Book on Recreation.gov →</a>
+                    </div>
+                    <div class="tip-card urgent">
+                        <div class="tip-num">02</div>
+                        <h4>No RV/Trailer on Cadillac Summit Rd</h4>
+                        <p>Vehicles over 21 feet and <strong>any trailer are prohibited</strong> on the Cadillac Summit Road. Plan to unhitch the Suburban at the KOA and drive up separately.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">03</div>
+                        <h4>Use the Island Explorer Shuttle</h4>
+                        <p>Parking in Bar Harbor and around the park is a nightmare in summer. The <strong>free Island Explorer bus</strong> stops at all major trailheads from Bar Harbor. Leave the Suburban at camp!</p>
+                        <a href="https://www.exploreacadia.com/" target="_blank" class="btn btn-sm">Explorer Bus Info →</a>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">04</div>
+                        <h4>Start Every Day Before 8 AM</h4>
+                        <p>Acadia gets extremely crowded in mid-June. Parking lots at Sand Beach, Thunder Hole, and Bass Harbor fill up by 9 AM on clear days. Early birds get the trails to themselves.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">05</div>
+                        <h4>Bass Harbor: Go at Sunrise, Not Sunset</h4>
+                        <p>The Bass Harbor Lighthouse parking lot is tiny (12 cars!) and lines form 2+ hours before sunset. Visit at sunrise or mid-morning for stunning light and zero wait.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">06</div>
+                        <h4>Dog Rules Are Strict — Know Them</h4>
+                        <p>Dogs are <strong>not allowed</strong> on Sand Beach (June 15–Sept 8), Echo Lake (May 15–Sept 15), or on the ladder trails (Precipice, Beehive, Jordan Cliffs). Always on a 6-ft leash. Most other trails are fine!</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">07</div>
+                        <h4>Check Falcon Trail Closures Daily</h4>
+                        <p>Peregrine falcons nest on cliff faces during June. Precipice Trail and sometimes Beehive are closed during nesting. Check the NPS app or visitor center boards each morning.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">08</div>
+                        <h4>Black Flies Peak in June</h4>
+                        <p>June is peak black fly season in Maine — especially inland and in the woods. Bring DEET-based insect repellent. The ocean breezes at our KOA site will help keep them away at camp.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">09</div>
+                        <h4>Thunder Hole Timing Matters</h4>
+                        <p>Thunder Hole is most dramatic at <strong>high tide with a ± 3 ft swell</strong>. A calm-day low tide produces a trickle. Check the tide chart and plan accordingly for the big boom!</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">10</div>
+                        <h4>Park Pass — $35 for 7 Days</h4>
+                        <p>One $35 America the Beautiful pass covers the Suburban and everyone inside for 7 consecutive days. Display it prominently on the windshield. No cash — credit/debit only at entrance stations.</p>
+                        <a href="https://www.nps.gov/acad/planyourvisit/fees.htm" target="_blank" class="btn btn-sm">NPS Fee Info →</a>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">11</div>
+                        <h4>Allow at Least 4 Full Days</h4>
+                        <p>The park is spread across MDI AND the Schoodic Peninsula. With 4 days at KOA, we're right at the minimum to hit the highlights. Every day counts — have a loose plan the night before.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-num">12</div>
+                        <h4>Lupines & Late Spring Blooms</h4>
+                        <p>Early June is when Maine's famous lupine wildflowers bloom along roadsides (especially in the White Mountains / VT on the drive up). Stop for photos — they won't last!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-    
+
     <footer>
-        <p>Built for the Smith Family Vacation • 2026</p>
+        <p>Smith Family Private Trip Planner · Acadia 2026 · Built with ❤️</p>
     </footer>
 
     <script src="script.js"></script>
