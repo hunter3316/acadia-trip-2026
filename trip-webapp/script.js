@@ -167,4 +167,48 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    // ===================== TODO CHECKLIST PERSISTENCE =====================
+    const STORAGE_KEY = 'acadia-todo-state';
+
+    function loadTodoState() {
+        try {
+            return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+        } catch { return {}; }
+    }
+
+    function saveTodoState(state) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function updateProgress() {
+        const allItems = document.querySelectorAll('.todo-item:not(.completed) .todo-check:not(:disabled)');
+        const allCheckable = document.querySelectorAll('.todo-check:not(:disabled)');
+        const checked = Array.from(allCheckable).filter(cb => cb.checked).length;
+        const total = allCheckable.length;
+        const fill = document.getElementById('todo-progress-fill');
+        const text = document.getElementById('todo-progress-text');
+        if (fill) fill.style.width = total ? (checked / total * 100) + '%' : '0%';
+        if (text) text.textContent = checked + ' / ' + total + ' completed';
+    }
+
+    // Init: restore saved states
+    const savedState = loadTodoState();
+    document.querySelectorAll('.todo-item[data-id]').forEach(item => {
+        const id = item.dataset.id;
+        const cb = item.querySelector('.todo-check');
+        if (!cb || cb.disabled) return;
+        if (savedState[id]) {
+            cb.checked = true;
+            item.classList.add('completed');
+        }
+        cb.addEventListener('change', () => {
+            const state = loadTodoState();
+            state[id] = cb.checked;
+            saveTodoState(state);
+            item.classList.toggle('completed', cb.checked);
+            updateProgress();
+        });
+    });
+    updateProgress();
+
 });

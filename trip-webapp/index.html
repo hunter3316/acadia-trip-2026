@@ -43,6 +43,7 @@
         <div class="tab-nav-inner">
             <button class="tab-btn active" data-tab="itinerary" id="tab-btn-itinerary">🗓️ Itinerary</button>
             <button class="tab-btn" data-tab="route" id="tab-btn-route">🗺️ Route</button>
+            <button class="tab-btn" data-tab="todo" id="tab-btn-todo">✅ To‑Do</button>
             <button class="tab-btn" data-tab="activities" id="tab-btn-activities">🏔️ Activities</button>
             <button class="tab-btn" data-tab="wildlife" id="tab-btn-wildlife">🐦 Wildlife</button>
             <button class="tab-btn" data-tab="campsite" id="tab-btn-campsite">🏕️ Campsite</button>
@@ -779,6 +780,283 @@
                         <p>Early June is when Maine's famous lupine wildflowers bloom along roadsides (especially in the White Mountains / VT on the drive up). Stop for photos — they won't last!</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===================== TAB: TODO ===================== -->
+        <section class="tab-panel" id="tab-todo">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>✅ Trip To‑Do List</h2>
+                    <p>Prioritized prep checklist — check items off as you go. Progress saves automatically.</p>
+                    <div class="todo-progress-bar">
+                        <div class="todo-progress-fill" id="todo-progress-fill"></div>
+                    </div>
+                    <p class="todo-progress-text" id="todo-progress-text">0 / 0 completed</p>
+                </div>
+
+                <!-- URGENT -->
+                <div class="todo-section">
+                    <div class="todo-section-header urgent">
+                        <span class="todo-priority-dot urgent"></span>
+                        <h3>🔴 URGENT — Do Now</h3>
+                    </div>
+
+                    <label class="todo-item" data-id="cadillac-tix">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Cadillac Mountain Sunrise — Vehicle Reservation</strong>
+                            <p>$6 timed entry required. 30% of tickets released 90 days out — <strong>already open!</strong> Book for June 9, 10, or 11 sunrise slot.</p>
+                            <a href="https://www.recreation.gov/timed-entry/10086372" target="_blank" class="btn btn-sm">Book on Recreation.gov →</a>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="puffin-cruise">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Puffin &amp; Lighthouse Cruise — Book Tickets</strong>
+                            <p>Bar Harbor Whale Watch Co. · 2.5–3 hr tour · Early June spots are highly sought after by photographers.</p>
+                            <a href="https://www.barharborwhales.com/lighthouse-cruises/puffin-lighthouse-cruise/" target="_blank" class="btn btn-sm">Book Puffin Cruise →</a>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="whale-watch">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Whale Watch Tour — Book Tickets</strong>
+                            <p>Humpback, minke, and finback whales common in June. Can combine with Puffin tour or book separately.</p>
+                            <a href="https://www.barharborwhales.com/" target="_blank" class="btn btn-sm">Book Whale Watch →</a>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="rv-insurance">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>RVShare Insurance &amp; Protection — PENDING</strong>
+                            <p>⚠️ All drivers must be listed and approved. <strong>If not completed, booking will be cancelled.</strong> Complete via RVShare dashboard. Res. #12076232.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- HIGH PRIORITY -->
+                <div class="todo-section">
+                    <div class="todo-section-header high">
+                        <span class="todo-priority-dot high"></span>
+                        <h3>🟠 HIGH PRIORITY — Before May 2026</h3>
+                    </div>
+
+                    <label class="todo-item" data-id="rv-payment-2">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>RVShare Payment 2 of 2 — Due May 7, 2026</strong>
+                            <p>$1,282.83 · Charged automatically to card on file — ensure it’s active and funded.</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="second-campsite">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Book Second Campsite (June 12–20)</strong>
+                            <p>Decide between coastal extension, Moosehead Lake, or return to VT. Set reminder: <strong>May 25 @ 10 AM EST</strong> for Schoodic Woods rolling release.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;">
+                                <a href="https://www.rvonthego.com/maine/mount-desert-narrows-camping-resort/" target="_blank" class="btn btn-sm">Mt Desert Narrows</a>
+                                <a href="https://www.rvonthego.com/maine/narrows-too-camping-resort/" target="_blank" class="btn btn-sm">Narrows Too</a>
+                                <a href="https://www.recreation.gov/camping/campgrounds/251833" target="_blank" class="btn btn-sm">Schoodic Woods</a>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="park-pass">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>America the Beautiful / NPS Pass</strong>
+                            <p>Annual Pass ($80) or 7-Day Pass ($35). Covers the Suburban + everyone inside. Credit/debit only at entrance.</p>
+                            <a href="https://www.nps.gov/planyourvisit/passes.htm" target="_blank" class="btn btn-sm">NPS Passes →</a>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="cadillac-70">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Cadillac Mountain — 70% Release Tickets</strong>
+                            <p>70% of tickets open <strong>2 days before</strong> your date at 10 AM EST. Set alarms for June 7, 8, 9 @ 9:55 AM.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- IMPORTANT -->
+                <div class="todo-section">
+                    <div class="todo-section-header medium">
+                        <span class="todo-priority-dot medium"></span>
+                        <h3>🟡 IMPORTANT — Before June 2026</h3>
+                    </div>
+
+                    <label class="todo-item" data-id="rv-deposit">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>RVShare Security Deposit — Due June 4</strong>
+                            <p>$500 credit card hold, 48 hrs before check-in. Collected automatically — ensure card has headroom.</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="bike-rental">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Research Bike Rentals — Carriage Roads</strong>
+                            <p>45 miles of car-free gravel roads. Check Acadia Bike &amp; Bar Harbor Bicycle for family bike reservations.</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="apps">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Download Essential Apps</strong>
+                            <p>NPS Acadia App · Recreation.gov · Tide Chart · KOA App · Island Explorer schedule</p>
+                            <a href="https://www.exploreacadia.com/" target="_blank" class="btn btn-sm">Explorer Bus Info →</a>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="print-res">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Save / Print Reservation Confirmations</strong>
+                            <p>KOA #21555510 · RVShare #12076232 · Cadillac reservation · Puffin/whale tickets</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="tide-charts">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Check Tide Charts for Your Dates</strong>
+                            <p>Low tide = tide pooling &amp; Bar Island walk. High tide = Thunder Hole. Tides shift ~50 min/day.</p>
+                            <a href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=8413320" target="_blank" class="btn btn-sm">NOAA Tide Chart →</a>
+                        </div>
+                    </label>
+
+                    <label class="todo-item" data-id="dog-rules">
+                        <input type="checkbox" class="todo-check">
+                        <div class="todo-body">
+                            <strong>Confirm Dog Restrictions for June Dates</strong>
+                            <p>Sand Beach: dogs banned June 15–Sept 8 (OK for June 8–12!) · Echo Lake: banned May 15–Sept 15 · Ladder trails: no dogs ever.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- PACKING -->
+                <div class="todo-section">
+                    <div class="todo-section-header packing">
+                        <span class="todo-priority-dot packing"></span>
+                        <h3>🎯 PACKING LIST</h3>
+                    </div>
+
+                    <div class="packing-grid">
+                        <div class="packing-category">
+                            <h4>🚐 RV &amp; Campsite</h4>
+                            <ul>
+                                <li>Leveling blocks &amp; wheel chocks</li>
+                                <li>Sewer hose + adapters</li>
+                                <li>Fresh water hose + pressure regulator</li>
+                                <li>Extension cord (50A→30A adapter)</li>
+                                <li>Outdoor mat / rug</li>
+                                <li>Hitch lock</li>
+                            </ul>
+                        </div>
+                        <div class="packing-category">
+                            <h4>🍳 Kitchen &amp; Food</h4>
+                            <ul>
+                                <li>Cooler + ice for day trips</li>
+                                <li>Reusable plates, cups, utensils</li>
+                                <li>Coffee maker / percolator</li>
+                                <li>Pantry staples + first-night dinner</li>
+                                <li>Trash bags, paper towels, foil</li>
+                                <li>Grill tools &amp; charcoal/propane</li>
+                            </ul>
+                        </div>
+                        <div class="packing-category">
+                            <h4>🧥 Clothing &amp; Personal</h4>
+                            <ul>
+                                <li>Layers! 50°F mornings → 75°F afternoons</li>
+                                <li>Rain jacket / poncho</li>
+                                <li>Grippy shoes for tide pooling</li>
+                                <li>Swimsuits</li>
+                                <li>DEET insect repellent (black flies!)</li>
+                                <li>Sunscreen SPF 30+</li>
+                            </ul>
+                        </div>
+                        <div class="packing-category">
+                            <h4>🐶 Dog Supplies</h4>
+                            <ul>
+                                <li>6-ft leash (required in NPS)</li>
+                                <li>Portable water bowl &amp; bottle</li>
+                                <li>Poop bags</li>
+                                <li>Dog bed / crate for RV</li>
+                                <li>Vet records / vaccination proof</li>
+                            </ul>
+                        </div>
+                        <div class="packing-category">
+                            <h4>📸 Photo &amp; Electronics</h4>
+                            <ul>
+                                <li>Camera + wide angle lens</li>
+                                <li>Tripod (sunrise / astro)</li>
+                                <li>Extra batteries + memory cards</li>
+                                <li>Phone chargers + power bank</li>
+                                <li>Binoculars (puffins, whales, falcons)</li>
+                            </ul>
+                        </div>
+                        <div class="packing-category">
+                            <h4>🩺 Safety &amp; Fun</h4>
+                            <ul>
+                                <li>First aid kit</li>
+                                <li>Flashlights / headlamps</li>
+                                <li>Fire extinguisher (check RV)</li>
+                                <li>Offline maps / GPS</li>
+                                <li>Board games &amp; card games</li>
+                                <li>Star chart app</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALREADY DONE -->
+                <div class="todo-section">
+                    <div class="todo-section-header done">
+                        <span class="todo-priority-dot done"></span>
+                        <h3>✅ ALREADY DONE</h3>
+                    </div>
+
+                    <label class="todo-item completed" data-id="rv-booking">
+                        <input type="checkbox" class="todo-check" checked disabled>
+                        <div class="todo-body">
+                            <strong>RVShare Booking — 2025 Coachmen 29SE</strong>
+                            <p>Res. #12076232 · June 6–20 · Brandon’s XL Bunkhouse, Wilton, NY</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item completed" data-id="koa-booking">
+                        <input type="checkbox" class="todo-check" checked disabled>
+                        <div class="todo-body">
+                            <strong>KOA Bar Harbor / Oceanside — June 8–12</strong>
+                            <p>Res. #21555510 · Oceans Edge site · $806.60</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item completed" data-id="rv-payment-1">
+                        <input type="checkbox" class="todo-check" checked disabled>
+                        <div class="todo-body">
+                            <strong>RVShare Payment 1 of 2 — $1,524.59 Paid</strong>
+                            <p>Processed on booking date.</p>
+                        </div>
+                    </label>
+
+                    <label class="todo-item completed" data-id="webapp">
+                        <input type="checkbox" class="todo-check" checked disabled>
+                        <div class="todo-body">
+                            <strong>Trip Web App — Built &amp; Deployed</strong>
+                            <p>You’re looking at it right now! 🎉</p>
+                        </div>
+                    </label>
+                </div>
+
             </div>
         </section>
 
