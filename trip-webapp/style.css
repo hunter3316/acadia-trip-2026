@@ -1724,3 +1724,99 @@ footer {
 .campsite-pdf-link .btn {
     font-size: 0.85rem;
 }
+
+/* Itinerary cross-links */
+.itinerary-link {
+    margin-top: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    font-size: 0.8rem !important;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.itinerary-link:hover {
+    opacity: 1;
+}
+
+/* Moose Route Cards */
+.moose-routes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.moose-route-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+}
+
+.moose-route-card h4 {
+    margin: 8px 0 6px;
+    font-size: 1rem;
+}
+
+.moose-route-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0 0 12px;
+}
+
+.moose-route-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+/* Moose Waypoint Grid */
+.moose-waypoints {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 28px;
+}
+
+.moose-waypoints h4 {
+    margin: 0 0 12px;
+}
+
+.moose-waypoint-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.moose-waypoint {
+    display: block;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--accent) !important;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.moose-waypoint:hover {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: rgba(0, 210, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .moose-routes-grid,
+    .moose-waypoint-grid {
+        grid-template-columns: 1fr;
+    }
+}

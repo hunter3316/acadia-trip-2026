@@ -66,6 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // ===================== ITINERARY CROSS-LINKS =====================
+    document.querySelectorAll('.itinerary-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetTab = link.dataset.goto;
+            const targetBtn = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
+            if (targetBtn) targetBtn.click();
+        });
+    });
+
     // ===================== STICKY NAV SHADOW =====================
     window.addEventListener('scroll', () => {
         if (tabNav) {
