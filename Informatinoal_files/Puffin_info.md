@@ -52,8 +52,8 @@ Maine is the **only US state** where Atlantic Puffins breed. Thanks to Dr. Steph
 ### 🚢 Option 4: Bold Coast / Machias Seal Island (Advanced)
 - **Departs from:** Cutler, ME (~2 hrs east of Acadia)
 - **Duration:** Full day trip
-- **What you'll see:** Largest puffin colony on the Maine coast; **may be able to land on the island** (weather-dependent, strict permits)
-- **Note:** This is farther afield and would require a dedicated day trip from Acadia. Better for serious birders/photographers.
+- **What you'll see:** Largest puffin colony on the Maine coast. This is the **only on-land option** where you can land on the island (weather-dependent, strict permits).
+- **Note:** Currently **SOLD OUT**, but watch for cancellations. This is farther afield and would require a dedicated day trip from Acadia. Better for serious birders/photographers.
 - **Book at:** [boldcoast.com](https://www.boldcoast.com/)
 
 ### Recommendation for Our Trip
