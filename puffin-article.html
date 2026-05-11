@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Depth Puffin Guide — Acadia 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: -40px auto 40px;
+            padding: 40px;
+            background: var(--bg-dark-secondary);
+            border-radius: 16px;
+            box-shadow: var(--shadow-strong);
+            border: 1px solid var(--border-color);
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .article-container h1, .article-container h2, .article-container h3 {
+            color: var(--text-light);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3em;
+        }
+        .article-container h1 { font-size: 2em; border-bottom: none; }
+        .article-container h2 { font-size: 1.5em; }
+        .article-container h3 { font-size: 1.25em; border-bottom: none; }
+        .article-container p {
+            line-height: 1.8;
+            margin-bottom: 1.2em;
+            color: var(--text-muted);
+        }
+        .article-container ul, .article-container ol {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5em;
+            padding-left: 2em;
+        }
+        .article-container li {
+            margin-bottom: 0.5em;
+        }
+        .article-container strong {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        .article-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+            color: var(--text-muted);
+        }
+        .article-container th, .article-container td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        .article-container th {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+        }
+        .article-container a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .article-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>In-Depth Puffin Guide</h1>
+            <p>A comprehensive guide to puffin photography and logistics for the Acadia region.</p>
+            <div style="margin-top: 2rem;">
+                <a href="index.html" class="btn btn-primary">← Back to Itinerary</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="article-container" id="content">
+            <p style="text-align:center;">Loading article...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" style="text-align: center; color: var(--text-muted);">
+            <p>Downeast Maine & Acadia National Park | June 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch the local markdown file and render it
+        fetch('Puffin_article_fullinfo.md')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.text();
+            })
+            .then(text => {
+                // Remove the first line warning
+                const lines = text.split('\n');
+                if (lines[0].includes('DO NOT ALTER')) {
+                    lines.shift();
+                }
+                
+                // Remove Markdown footnotes syntax like ^^ or ^1^ for cleaner rendering
+                const cleanText = lines.join('\n').replace(/\^\^/g, '').replace(/\^\[.*?\]\^/g, '');
+                
+                // Parse markdown to HTML
+                document.getElementById('content').innerHTML = marked.parse(cleanText);
+            })
+            .catch(error => {
+                console.error('Error fetching markdown:', error);
+                document.getElementById('content').innerHTML = `
+                    <div style="text-align:center;">
+                        <h2>Error Loading Article</h2>
+                        <p>Could not load the markdown file. If you are viewing this file locally (file://), your browser's security settings may block fetching local files. Please view via the live website.</p>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
