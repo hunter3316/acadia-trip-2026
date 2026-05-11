@@ -2,11 +2,18 @@
 
 ## Purpose
 
-You are assisting the user (and their family) in planning a vacation itinerary for **June 6 to June 20, 2026**. This will be an ongoing project over several days. Your role is to help synthesize research, find suitable RV rentals, identify optimal routes, and build an actionable, budget-conscious travel itinerary that meets all the family's constraints.
+You are assisting the user (and their family) in planning and maintaining a vacation itinerary for **June 6 to June 20, 2026**. This is an ongoing, living project. Your role is to:
+
+1. Synthesize new information as it arrives (daily plans, activity details, restaurant picks, new bookings, etc.).
+2. Update the relevant informational markdown files in this workspace.
+3. Update the live trip website (`trip-webapp/`) to reflect the changes.
+4. Deploy those changes to GitHub so the site goes live automatically.
+
+**All four steps should happen autonomously in a single pass whenever the user provides new trip information.**
 
 ## Current Trip Status: FULLY CEMENTED ✅
 
-The entire itinerary is now booked and confirmed. No TBD blocks remain.
+The entire itinerary is now booked and confirmed. No TBD blocks remain. The project is now in **maintenance & enrichment mode** — the user will provide day-by-day activity plans, restaurant reservations, packing updates, and other details over the coming weeks.
 
 ### Confirmed Schedule
 
@@ -37,6 +44,68 @@ The entire itinerary is now booked and confirmed. No TBD blocks remain.
   3. **Schoodic Peninsula, ME:** 1 night at Schoodic Woods NPS (June 12–13).
   4. **Moosehead Lake / Greenville, ME:** 2 nights at Moose Creek RV Resort (June 13–15). Moose photography basecamp.
 
+---
+
+## Ongoing Updates Workflow
+
+The user will periodically provide new trip information — for example, detailed day plans ("Here's what we're doing on June 9"), restaurant reservations, tour bookings, packing list updates, or changes to the itinerary. When this happens, follow this procedure **autonomously and completely**:
+
+### Step 1: Update Informational Files
+
+Determine which workspace markdown files are affected and update them:
+
+| Type of Update | File(s) to Modify |
+|---|---|
+| Day-by-day activity plans | `Official 2026 Itinerary.md` — add detailed day plans under the appropriate Part section |
+| New bookings or reservation changes | `Official 2026 Itinerary.md` (reservation table), `Trip ToDo List.md` (move items to ✅ DONE) |
+| Packing or prep changes | `Trip ToDo List.md` |
+| New research or tips | `Acadia NPS Research Summary.md`, `Key mistakes to not make.md`, `top 10 things to do in acadia.md`, or create a new file if needed |
+| Photography / moose planning | `Informatinoal_files/Moose photography deep-research-report (2).md` |
+| Logistics or timing changes | `2026-Specific-Logistics.md` |
+
+If the update doesn't fit cleanly into an existing file, create a new markdown file in the workspace root with a descriptive name.
+
+### Step 2: Update the Website
+
+Modify the relevant sections of `trip-webapp/index.html` (and `style.css` / `script.js` if needed) to reflect the new information. Common updates include:
+
+* **Itinerary tab**: Add or expand day-level detail cards within the timeline.
+* **Activities tab**: Add new activity cards with images, descriptions, and metadata tags.
+* **Campsite tab**: Update reservation details or add new info cards.
+* **To-Do tab**: Sync completed items, add new items.
+* **Wildlife / Moose Guide / Explore / Pro Tips tabs**: Add content as appropriate.
+
+When adding day-level detail to the Itinerary tab, expand the existing timeline cards with sub-day plans (morning, afternoon, evening activities) so family members can see exactly what's planned each day.
+
+### Step 3: Deploy to GitHub
+
+After making changes, deploy to **both branches** using this exact workflow:
+
+```powershell
+# 1. Commit and push changes on main
+git add -A
+git commit -m "<descriptive message about what changed>"
+git push origin main
+
+# 2. Deploy to gh-pages
+git checkout gh-pages
+git checkout main -- trip-webapp/index.html trip-webapp/script.js trip-webapp/style.css trip-webapp/assets/
+Copy-Item trip-webapp\* . -Recurse -Force
+Remove-Item trip-webapp -Recurse -Force
+git add -A
+git commit -m "Deploy: <same descriptive message>"
+git push origin gh-pages
+
+# 3. Return to main
+git checkout main
+```
+
+### Step 4: Confirm
+
+Tell the user what files were updated, what webapp sections changed, and confirm the deploy succeeded. If any git step fails, investigate and fix autonomously; escalate only if authentication or remote access is the issue.
+
+---
+
 ## Web Application & Deployment
 
 ### Live Site
@@ -49,20 +118,13 @@ The entire itinerary is now booked and confirmed. No TBD blocks remain.
 - **Branch `main`:** Full project — docs, research files, reservation PDFs, and the webapp source in `trip-webapp/`.
 - **Branch `gh-pages`:** Deployment branch for GitHub Pages. Contains only the webapp files at the root (`index.html`, `script.js`, `style.css`, `assets/`).
 
-### Deployment Workflow
-**IMPORTANT:** When updating the website, you must update BOTH branches:
-1. Make changes to files in `trip-webapp/` on the `main` branch. Commit and push.
-2. Switch to `gh-pages`: `git checkout gh-pages`
-3. Pull the updated files: `git checkout main -- trip-webapp/index.html trip-webapp/script.js trip-webapp/style.css trip-webapp/assets/`
-4. Copy to root: `Copy-Item trip-webapp\* . -Recurse -Force` (then `Remove-Item trip-webapp -Recurse -Force`)
-5. Commit and push: `git add -A && git commit -m "..." && git push origin gh-pages`
-6. Switch back: `git checkout main`
-
 ### Webapp Features
 - **Passcode:** 3316 (unlocks the app)
 - **Tabs:** Itinerary, Route, To-Do, Activities, Wildlife, 🦌 Moose Guide, Campsite, Our RV, Explore, Pro Tips
 - **Tech:** Vanilla HTML5/CSS3/JS, offline-ready, localStorage for todo persistence
-- **Assets:** `trip-webapp/assets/` — hero images for each section
+- **Assets:** `trip-webapp/assets/` — hero images for each section, RV photos, reservation PDFs
+
+---
 
 ## Constraints & Preferences
 
@@ -80,24 +142,88 @@ The entire itinerary is now booked and confirmed. No TBD blocks remain.
 * Must accommodate the selected RV.
 * **Hookups:** Electric and water are mandatory. Septic/sewer is highly desirable but can be sacrificed for a significantly better campground experience.
 
+---
+
 ## Workspace Files Context
 
-This folder contains files that will be gathered and developed over time. Use them as context and update them as needed:
+This folder contains all project files. Use them as context and update them as needed:
 
-1. `Deep reserach on acadia vacation.md` - A massive, highly detailed operational blueprint covering the June 2026 trip. It outlines critical Acadia topographical limitations (dead-end roads, narrow historic underpasses prohibiting oversized rigs), extensive MDI vs. Schoodic Peninsula campground analysis (KOA vs NPS), Island Explorer bus logistics, advanced photography timings for Cadillac Mountain and Raven's Nest, the lupine bloom, Puffin tours, intense dog trail restrictions, dining options, and strategies to mitigate the June black fly season.
-2. `trip options.md` - A living document containing ongoing ideas, estimated driving duration maps (e.g., Morgantown vs. Newburgh vs. Burlington), trailering times, and links to potential sub-8000lb RV rental listings (like Jayco Jay Feather / Keystone Bullet Classic).
-3. `Acadia NPS Research Summary.md` - A synthesized summary of the most critical logistical constraints pulled straight from nps.gov/acad. Evaluates park campground capabilities (electric/water vs dry, 6-month booking lead time), Cadillac Summit vehicle reservations prohibiting RV trailers, Bark Ranger dog regulations, fees, and includes top spots for photography, tide pooling, and private oceanside RV hookup locations.
-4. `Key mistakes to not make.md` - Has some nice tips to be sure to avoid.
-5. `Official 2026 Itinerary.md` - The canonical day-by-day schedule with all reservation numbers and costs.
-6. `Informatinoal_files/` - Contains reservation PDFs (KOA, Schoodic Woods, Moose Creek) and the Moose Photography deep-research report.
+### Core Planning Files
+
+| File | Description |
+|------|-------------|
+| `agent.md` | **This file.** Agent context prompt with project directives, status, and workflows. |
+| `Official 2026 Itinerary.md` | The canonical day-by-day schedule with all reservation numbers and costs. **Primary file to update with new day plans.** |
+| `Trip ToDo List.md` | Comprehensive categorized to-do list (urgent → packing). Sync with webapp To-Do tab. |
+| `2026-Specific-Logistics.md` | Date-specific logistics: solar times, tide predictions, reservation timeline checkpoints. |
+
+### Research & Reference Files
+
+| File | Description |
+|------|-------------|
+| `Deep reserach on acadia vacation.md` | Massive operational blueprint covering Acadia topographical limitations, campground analysis, Island Explorer logistics, photography timings, lupine bloom, Puffin tours, dog restrictions, dining, and black fly mitigation. |
+| `Acadia NPS Research Summary.md` | Synthesized critical constraints from nps.gov/acad: hookup limitations, reservation timelines, Cadillac vehicle reservations, dog/Bark Ranger policies, entrance fees, photography spots, tide pooling. |
+| `Key mistakes to not make.md` | Tips to avoid common Acadia pitfalls (from video notes). |
+| `top 10 things to do in acadia.md` | Top 10 Acadia attractions from a former park ranger (from video notes). |
+
+### Historical / Superseded Files
+
+| File | Description |
+|------|-------------|
+| `trip options.md` | Early-stage driving-time estimates and RV listing links. Largely superseded by final bookings. |
+| `Vacation Itinerary Options.md` | Three candidate itinerary options (Acadia First, Sandwich, NY Intercept). Superseded — final itinerary is Option 2 hybrid. |
+| `Booking-Availability-Report.md` | Booking status and direct links from the research phase. All bookings now confirmed. |
+
+### Informational Files (`Informatinoal_files/`)
+
+| File | Description |
+|------|-------------|
+| `KOA rental acadia 2026.md` / `.pdf` | KOA reservation confirmation details. |
+| `Moose photography deep-research-report (2).md` | Detailed moose photography field guide — locations (Lazy Tom Bog, Kokadjo, Prong Pond, Lily Bay, West Shirley Bog), timing, techniques, gear. Powers the 🦌 Moose Guide webapp tab. |
+| `RVshare trailer rental acadia trip 2026 email.md` / `.pdf` | RVShare booking confirmation email. |
+| `receipt for rvshare main trip 2026.md` / `.pdf` | RVShare payment receipt. |
+| `rv share recept 2.pdf` | Second RVShare receipt. |
+| `insurence for rvshare main trip 2026.pdf` | RVShare insurance documentation. |
+| `Moose creek reservation june 13-15.pdf` | Moose Creek RV Resort confirmation. |
+| `scoodic woods reservation jun12-13.pdf` | Schoodic Woods NPS reservation confirmation. |
+| `preview (moose viewing directions).html` | HTML preview of moose viewing directions/map. |
+
+### Webapp Files (`trip-webapp/`)
+
+| File | Description |
+|------|-------------|
+| `index.html` | Main webapp — all 10 tabs rendered in a single-page app (~1,567 lines). |
+| `style.css` | All styling — glassmorphism, dark theme, responsive layout (~40 KB). |
+| `script.js` | Passcode logic, tab switching, localStorage for to-do, RV gallery, clipboard. |
+| `assets/` | 21 files: hero images (`.png`), RV photos (`.webp`), reservation PDFs, floorplan. |
+
+### Utility Files (`scripts/`)
+
+| File | Description |
+|------|-------------|
+| `download_rv_images.ps1` | PowerShell script to download RV listing images. |
+| `extract_pdfs.py` / `_plumber.py` / `_pymupdf.py` | Python scripts for extracting text from reservation PDFs. |
+
+### Other Directories
+
+| Directory | Description |
+|-----------|-------------|
+| `assets/` | Root-level assets directory (currently empty). |
+| `.git/` | Git repository metadata. Branches: `main` (working), `gh-pages` (deployment). |
+
+---
 
 ## Agent Directives
 
 * Always reference the constraints (especially trailer weight < 8000 lbs and party size of 6 + dog) when suggesting RVs or campsites.
 * When evaluating routes, consider the impact on towing time and driver fatigue.
 * Suggest budget-friendly yet comfortable options, sticking to the <$200/day RV rental and <$200/day campsite budget baselines where possible.
-* Keep `trip options.md` and any itinerary files updated with the latest viable options and decisions.
+* **When the user provides new trip details (day plans, bookings, etc.), follow the full Ongoing Updates Workflow above: update info files → update webapp → deploy to GitHub → confirm.**
+* Keep `Official 2026 Itinerary.md` and `Trip ToDo List.md` as the primary living documents.
 * **When updating the webapp**, always deploy to BOTH `main` and `gh-pages` branches (see Deployment Workflow above).
+* If you notice stale, contradictory, or incomplete information in any file, fix it proactively and note what you corrected.
+
+---
 
 ## Preferences & Trip Logistics
 
@@ -134,6 +260,8 @@ This folder contains files that will be gathered and developed over time. Use th
 * **Targets:** Acadia coastline, sunrise/sunset, Puffins, Loons, Whales, Moose, and marine life.
 * **Camp Vistas:** Strongly desire camping right on the water/ocean for immediate access to tide pools and beautiful vistas (cliffs overlooking the ocean). Moving the RV a few times to get these prime spots is fully approved.
 * **Moose Photography:** A detailed field guide is available in the Moose Guide tab of the webapp and in `Informatinoal_files/Moose photography deep-research-report (2).md`. Priority locations: Lazy Tom Bog (#1), Kokadjo (#2), Prong Pond (#3), Lily Bay State Park (#4), West Shirley Bog (#5).
+
+---
 
 ## Remaining To-Do Items
 

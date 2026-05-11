@@ -58,7 +58,7 @@ This is the living document outlining the cemented plans for the June 2026 Acadi
 ---
 
 ### Part 5: Return to the Meadow (Cemented)
-*   **June 15 (Sunday): Transit to Vermont**
+*   **June 15 (Monday): Transit to Vermont**
     *   Pack up Moose Creek RV Resort and tow back to **Cambridge, VT** (~5 hrs).
     *   Set up basecamp again in Erica's family meadow.
 *   **June 16–19 (Monday–Thursday):**

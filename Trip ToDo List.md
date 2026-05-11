@@ -34,17 +34,10 @@
 
 ## 🟠 HIGH PRIORITY — Do Before May 2026
 
-- [ ] **RVShare Payment 2 of 2 — Due May 7, 2026**
+- [ ] **⚠️ RVShare Payment 2 of 2 — Was Due May 7, 2026 — CONFIRM PAID**
   - Amount: $1,282.83
-  - Charged to card on file automatically — ensure card is active and funded
-
-- [ ] **Book Second Campsite (June 12–20)**
-  - Decide between Option A (Coastal Extension), B (Moosehead Lake), or C (Return to VT)
-  - Top contenders to book:
-    - [Mount Desert Narrows](https://www.rvonthego.com/maine/mount-desert-narrows-camping-resort/) — on MDI, waterfront, heated pool
-    - [Narrows Too](https://www.rvonthego.com/maine/narrows-too-camping-resort/) — Trenton, big-rig friendly, less crowded
-    - [Schoodic Woods (NPS)](https://www.recreation.gov/camping/campgrounds/251833) — quiet peninsula, dark skies
-  - ⚠️ Set reminder: **May 25, 2026 @ 10:00 AM EST** for Schoodic Woods 14-day rolling release
+  - Was scheduled to auto-charge on May 7. Verify it went through on RVShare dashboard.
+  - If not paid, contact RVShare immediately — booking may be at risk.
 
 - [ ] **America the Beautiful Annual Pass ($80) or 7-Day Pass ($35)**
   - Covers the Suburban + everyone inside for all NPS sites
@@ -158,3 +151,5 @@
 - [x] KOA Bar Harbor / Oceanside — June 8–12, Oceans Edge site (Res. #21555510)
 - [x] RVShare Payment 1 of 2 — $1,524.59 paid
 - [x] Trip Web App — built and deployed for family
+- [x] Schoodic Woods (NPS) — June 12–13, Site B32, B-Loop (Res. #0846047182-1) — $40.00
+- [x] Moose Creek RV Resort — June 13–15, Site 112, 30/50 FHU Premium (Res. #9644) — $261.27 paid in full
