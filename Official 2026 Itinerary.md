@@ -21,7 +21,7 @@ This is the living document outlining the cemented plans for the June 2026 Acadi
     *   Tow the RV north to **Cambridge, VT** and set up basecamp in Erica's parents' meadow.
 *   **June 7 (Sunday):**
     *   Morning: Rest day and family time in Cambridge, VT.
-    *   **12:15 PM: ✈️ BETA Technologies Factory Tour** (Boys only — Papa Reg, David, Weston & Colton)
+    *   **12:15 PM: ✈️ BETA Technologies Factory Tour** (Hosted by Papa Reg — open invite, everyone welcome! Sorry Indy 🐾)
         *   Tour of BETA's electric aircraft facility in South Burlington, VT.
         *   BETA builds the ALIA — a revolutionary all-electric aircraft (50-ft wingspan, 5 passengers, 336 NM range).
         *   📍 Location: BETA Technologies, South Burlington, VT (near Burlington International Airport)
