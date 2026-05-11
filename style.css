@@ -772,6 +772,80 @@ details[open] summary::after { transform: rotate(45deg); }
     margin-bottom: 12px;
 }
 
+/* Puffin collapsible info section */
+.puffin-details {
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.puffin-details summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: background 0.2s;
+    list-style: none;
+}
+
+.puffin-details summary::-webkit-details-marker { display: none; }
+
+.puffin-details summary::before {
+    content: '▸ ';
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.puffin-details[open] summary::before {
+    content: '▾ ';
+}
+
+.puffin-details summary:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.puffin-details-body {
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.puffin-details-body h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 14px 0 8px;
+}
+
+.puffin-details-body h4:first-child {
+    margin-top: 0;
+}
+
+.puffin-details-body ul {
+    padding-left: 20px;
+    margin: 0 0 8px;
+}
+
+.puffin-details-body li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.puffin-details-body li strong {
+    color: var(--text-light);
+}
+
+.puffin-details-body p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
 .wildlife-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
