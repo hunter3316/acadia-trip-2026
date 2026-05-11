@@ -25,7 +25,15 @@ Maine is the **only US state** where Atlantic Puffins breed. Thanks to Dr. Steph
 
 ## Where to See Puffins
 
-### 🚢 Option 1: Bar Harbor Whale Watch Co. — Puffin & Lighthouse Cruise
+### 🚢 Option 1: Acadia Puffin Cruise — **Closest Viewing**
+- **Departs from:** Pigeon Hill Bay (Steuben, ME) — a bit of a drive east of Acadia
+- **Duration:** 2 hours aboard the 40' Tricia Clark
+- **What you'll see:** The absolute closest viewing of Atlantic Puffins at Petit Manan Island. Since it's a smaller, dedicated puffin boat, it can get much closer to the wildlife than the large catamarans. 
+- **Distance to colony:** Departs much closer to Petit Manan Island than Bar Harbor tours.
+- **Book at:** [acadiapuffincruise.com](https://acadiapuffincruise.com/)
+- **Recommendation:** **Highly Recommended** for the best puffin-viewing experience.
+
+### 🚢 Option 2: Bar Harbor Whale Watch Co. — Puffin & Lighthouse Cruise
 - **Departs from:** Bar Harbor (walking distance from downtown)
 - **Duration:** 2.5–3 hours
 - **What you'll see:** Atlantic Puffins, Petit Manan Lighthouse (2nd tallest in Maine), razorbills, common murres, Arctic terns, bald eagles
@@ -35,7 +43,7 @@ Maine is the **only US state** where Atlantic Puffins breed. Thanks to Dr. Steph
 - **Cost:** ~$65–$75/adult, ~$40/child
 - **⚠️ Book early** — early June dates sell out fast, especially around the Acadia Birding Festival
 
-### 🚢 Option 2: Bold Coast / Machias Seal Island (Advanced)
+### 🚢 Option 3: Bold Coast / Machias Seal Island (Advanced)
 - **Departs from:** Cutler, ME (~2 hrs east of Acadia)
 - **Duration:** Full day trip
 - **What you'll see:** Largest puffin colony on the Maine coast; **may be able to land on the island** (weather-dependent, strict permits)
@@ -43,7 +51,7 @@ Maine is the **only US state** where Atlantic Puffins breed. Thanks to Dr. Steph
 - **Book at:** [boldcoast.com](https://www.boldcoast.com/)
 
 ### Recommendation for Our Trip
-**Option 1 (Bar Harbor Whale Watch)** is the clear winner — departs from right where we're staying, short enough for comfort, and hits peak puffin activity in June. Can potentially combine with a whale watch tour on the same day.
+**Option 1 (Acadia Puffin Cruise)** is the clear winner for the absolute best, closest views of puffins. If convenience is the top priority, **Option 2 (Bar Harbor Whale Watch)** is great because it departs directly from Bar Harbor and can be paired with a whale watch.
 
 ---
 
