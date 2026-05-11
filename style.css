@@ -1820,3 +1820,187 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===================== COUNTDOWN TIMER ===================== */
+.countdown {
+    margin-top: 24px;
+}
+
+.countdown-blocks {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.countdown-block {
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    border-radius: 14px;
+    padding: 12px 18px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.countdown-num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.countdown-unit {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ===================== DAY PLAN CARDS ===================== */
+.day-plans {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.day-plan-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background 0.2s ease;
+}
+
+.day-plan-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.day-plan-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.day-badge {
+    background: rgba(0, 210, 255, 0.15);
+    border: 1px solid rgba(0, 210, 255, 0.35);
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.day-date {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.day-plan-body {
+    padding: 12px 16px;
+}
+
+.day-plan-body p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 6px;
+}
+
+.day-plan-body p:last-child {
+    margin-bottom: 0;
+}
+
+.day-plan-body em {
+    color: rgba(160, 165, 177, 0.6);
+}
+
+/* ===================== BUDGET SUMMARY ===================== */
+.budget-summary {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.budget-summary h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.budget-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.budget-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.budget-label {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.budget-amount {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    font-variant-numeric: tabular-nums;
+}
+
+.budget-total {
+    background: rgba(0, 210, 255, 0.08);
+    border-color: rgba(0, 210, 255, 0.25);
+    margin-top: 4px;
+}
+
+.budget-total .budget-label {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.budget-total .budget-amount {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.budget-note {
+    color: rgba(160, 165, 177, 0.6);
+    font-size: 0.82rem;
+    margin-top: 14px;
+    text-align: center;
+    font-style: italic;
+}

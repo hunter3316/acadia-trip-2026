@@ -221,4 +221,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     updateProgress();
 
+    // ===================== COUNTDOWN TIMER =====================
+    function updateCountdown() {
+        const tripStart = new Date('2026-06-06T16:00:00-04:00'); // RV pickup time EDT
+        const now = new Date();
+        const diff = tripStart - now;
+        const el = document.getElementById('trip-countdown');
+        if (!el) return;
+
+        if (diff <= 0) {
+            el.innerHTML = '<span class="countdown-label">🎉 The adventure has begun!</span>';
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        el.innerHTML = `
+            <div class="countdown-blocks">
+                <div class="countdown-block">
+                    <span class="countdown-num">${days}</span>
+                    <span class="countdown-unit">days</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-num">${hours}</span>
+                    <span class="countdown-unit">hours</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-num">${minutes}</span>
+                    <span class="countdown-unit">min</span>
+                </div>
+            </div>
+            <span class="countdown-label">until RV pickup!</span>
+        `;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
 });
