@@ -2004,3 +2004,40 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+/* ===================== SPECIAL EVENT & BIRTHDAY CARDS ===================== */
+.day-plan-card.special-event {
+    border-color: rgba(255, 170, 0, 0.25);
+    background: rgba(255, 170, 0, 0.04);
+}
+
+.day-plan-card.special-event:hover {
+    background: rgba(255, 170, 0, 0.08);
+}
+
+.day-badge.event {
+    background: rgba(79, 142, 247, 0.15);
+    border-color: rgba(79, 142, 247, 0.4);
+    color: var(--accent2);
+}
+
+.day-badge.birthday {
+    background: linear-gradient(135deg, rgba(255, 107, 149, 0.2), rgba(255, 170, 0, 0.2));
+    border: 1px solid rgba(255, 107, 149, 0.5);
+    color: #ff6b95;
+    animation: softPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 149, 0); }
+    50% { box-shadow: 0 0 12px 2px rgba(255, 107, 149, 0.25); }
+}
+
+.day-plan-img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 8px 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}

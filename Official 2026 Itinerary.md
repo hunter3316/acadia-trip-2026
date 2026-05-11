@@ -20,7 +20,12 @@ This is the living document outlining the cemented plans for the June 2026 Acadi
     *   Arrive by **4:00 PM** to pick up the 2025 Coachmen RV.
     *   Tow the RV north to **Cambridge, VT** and set up basecamp in Erica's parents' meadow.
 *   **June 7 (Sunday):**
-    *   Rest day and family time in Cambridge, VT.
+    *   Morning: Rest day and family time in Cambridge, VT.
+    *   **12:15 PM: ✈️ BETA Technologies Factory Tour** (Boys only — Papa Reg, David, Weston & Colton)
+        *   Tour of BETA's electric aircraft facility in South Burlington, VT.
+        *   BETA builds the ALIA — a revolutionary all-electric aircraft (50-ft wingspan, 5 passengers, 336 NM range).
+        *   📍 Location: BETA Technologies, South Burlington, VT (near Burlington International Airport)
+        *   🌐 [beta.team](https://beta.team/)
 
 ### Part 2: Acadia Oceanside (Cemented)
 *   **June 8 (Monday): Transit & Arrival**
@@ -47,9 +52,9 @@ This is the living document outlining the cemented plans for the June 2026 Acadi
     *   Check-in at **Moose Creek RV Resort** (58 E Rd, Greenville, ME).
     *   *Reservation Details:* #9644 (David Smith). Site: 112 — 30/50 FHU Premium. Cost: $261.27 (Paid in full).
     *   **Evening:** Sunset moose photography run to Kokadjo / First Roach Pond.
-*   **June 14 (Sunday):**
+*   **June 14 (Sunday): 🎂 Paityn's Birthday!**
     *   **Dawn:** Lazy Tom Bog — arrive by 4:30 AM for prime moose photography window.
-    *   **Midday:** Explore Lily Bay State Park or Prong Pond Trail.
+    *   **Midday:** Birthday breakfast and celebration at camp. Explore Lily Bay State Park or Prong Pond Trail.
     *   **Evening:** Second sunset session at Lily Bay or Prong Pond for atmospheric landscapes.
 *   **June 15 (Monday):**
     *   **Dawn:** Return to best-performing site from Day 1.
@@ -61,9 +66,17 @@ This is the living document outlining the cemented plans for the June 2026 Acadi
 *   **June 15 (Monday): Transit to Vermont**
     *   Pack up Moose Creek RV Resort and tow back to **Cambridge, VT** (~5 hrs).
     *   Set up basecamp again in Erica's family meadow.
-*   **June 16–19 (Monday–Thursday):**
-    *   5 relaxing nights with family. Decompress after the Maine adventures.
-    *   Enjoy the meadow, explore the local area, and prepare for the final drive south.
+*   **June 16–17 (Tuesday–Wednesday):**
+    *   Relaxing days with family. Enjoy the meadow, explore the local area.
+*   **June 18 (Thursday): 🎂 Erica's Birthday!**
+    *   **3:00 PM: 🫖 High Tea with the "Queen"** — The girls' birthday celebration at **The Governor's House** in Hyde Park, VT.
+        *   Hosted by Sylvia (Mom) for Erica's birthday. Guests: Erica, Sylvia, Morgan, and Paityn.
+        *   Traditional English afternoon tea — fine china, tiered stands of tea sandwiches, scones with clotted cream & jam, and petit fours.
+        *   📍 Location: 100 Main St, Hyde Park, VT 05655 (~25 min from Cambridge)
+        *   📞 Reservations required: 802-888-6888 (24 hrs notice for full tea)
+        *   🌐 [onehundredmain.com](https://www.onehundredmain.com)
+*   **June 19 (Thursday):**
+    *   Final full day. Prepare for the drive south.
 
 ---
 
