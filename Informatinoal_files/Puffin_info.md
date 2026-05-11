@@ -43,7 +43,13 @@ Maine is the **only US state** where Atlantic Puffins breed. Thanks to Dr. Steph
 - **Cost:** ~$65–$75/adult, ~$40/child
 - **⚠️ Book early** — early June dates sell out fast, especially around the Acadia Birding Festival
 
-### 🚢 Option 3: Bold Coast / Machias Seal Island (Advanced)
+### 🚢 Option 3: Acadian Boat Tours — Puffins, Lighthouses & Seabirds
+- **Departs from:** Bar Harbor
+- **Duration:** 3–3.5 hours
+- **What you'll see:** Atlantic Puffins, three lighthouses (Egg Rock, Winter Harbor, and Petit Manan), and various coastal wildlife.
+- **Book at:** [acadianboattours.com](https://acadianboattours.com/activities/puffins-lighthouses-and-seabirds-cruise/)
+
+### 🚢 Option 4: Bold Coast / Machias Seal Island (Advanced)
 - **Departs from:** Cutler, ME (~2 hrs east of Acadia)
 - **Duration:** Full day trip
 - **What you'll see:** Largest puffin colony on the Maine coast; **may be able to land on the island** (weather-dependent, strict permits)
