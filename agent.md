@@ -6,7 +6,7 @@ You are assisting the user (and their family) in planning and maintaining a vaca
 
 1. Synthesize new information as it arrives (daily plans, activity details, restaurant picks, new bookings, etc.).
 2. Update the relevant informational markdown files in this workspace.
-3. Update the live trip website (`trip-webapp/`) to reflect the changes.
+3. Update the live trip website (`trip-webapp/`) to reflect the changes. This website is designed to be a **one-stop place** for all information related to this trip. If there is any information the family might need (insurance, rules, locations, contacts, etc.), you must proactively add this information to the relevant places in the website so they never have to go hunting for it.
 4. Deploy those changes to GitHub so the site goes live automatically.
 
 **All four steps should happen autonomously in a single pass whenever the user provides new trip information.**
@@ -221,6 +221,7 @@ This folder contains all project files. Use them as context and update them as n
 * **When the user provides new trip details (day plans, bookings, etc.), follow the full Ongoing Updates Workflow above: update info files → update webapp → deploy to GitHub → confirm.**
 * Keep `Official 2026 Itinerary.md` and `Trip ToDo List.md` as the primary living documents.
 * **When updating the webapp**, always deploy to BOTH `main` and `gh-pages` branches (see Deployment Workflow above).
+* **Proactively add any new or missing information to the webapp.** The website must be a comprehensive one-stop destination for the trip. Don't wait for explicit instructions to add related metadata (like phone numbers, links to insurance, or rules) to the UI—anticipate what the user will need and integrate it seamlessly.
 * If you notice stale, contradictory, or incomplete information in any file, fix it proactively and note what you corrected.
 
 ---
