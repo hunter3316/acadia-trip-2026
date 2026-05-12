@@ -198,18 +198,20 @@ body.locked {
     background: rgba(15, 17, 21, 0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.07);
-    height: var(--tab-height);
+    min-height: var(--tab-height);
+    height: auto;
     display: flex;
     align-items: center;
+    padding: 10px 0;
 }
 
 .tab-nav-inner {
     display: flex;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
     padding: 0 20px;
-    overflow-x: auto;
-    scrollbar-width: none;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
