@@ -70,6 +70,11 @@ Maine is the **only US state** where Atlantic Puffins breed. Thanks to Dr. Steph
 - 💊 **Seasickness remedy** — open ocean can be rough; take Dramamine 30 min before departure
 - 🥤 **Water and snacks** — 3 hours is a long time on the water
 
+### Advanced Maritime Photography Tips
+- **Optics & Stabilization:** A pitching boat deck renders heavy tripods and fluid gimbal heads completely unusable. Furthermore, a fixed 600mm or 800mm prime lens restricts the field of view so severely that finding a fast-moving puffin from a rocking boat is nearly impossible. The optimal setup is a **stabilized zoom lens (e.g., 100-400mm or 150-500mm) operated handheld**, allowing you to locate the bird at 100mm and zoom in to track it.
+- **Exposure Settings:** Puffins are extremely fast flyers. Set a baseline shutter speed of **1/2500s or faster** (up to 1/4000s) to freeze their wings and any water splashes.
+- **Marine Fog:** If you encounter heavy Maine coastal fog, do not rely on standard camera metering, which will underexpose the white fog into a muddy gray. Use **positive exposure compensation (+1.0 to +2.0 EV)** to "expose to the right," allowing the puffin to pop vividly out of a high-key, atmospheric mist.
+
 ---
 
 ## Fun Facts for the Kids
