@@ -4,7 +4,7 @@
 
 ---
 
-## 🔴 URGENT — Do Now (Before April 2026)
+## 🚨 OVERDUE / DO IMMEDIATELY (Trip starts in 6 days!)
 
 - [ ] **Cadillac Mountain Sunrise Vehicle Reservation**
   - $6 timed entry required from late May – late Oct
@@ -18,26 +18,9 @@
   - Early June spots are highly sought after by photographers — **book NOW**
   - [Book Puffin Cruise →](https://www.barharborwhales.com/lighthouse-cruises/puffin-lighthouse-cruise/)
 
-- [ ] **Whale Watch Tour — Book Tickets**
-  - Same company (Bar Harbor Whale Watch Co.) runs whale tours
-  - Humpback, minke, and finback whales common in June
-  - Can combine with Puffin tour or book separately
-  - [Book Whale Watch →](https://www.barharborwhales.com/)
-
-- [ ] **RVShare Insurance & Protection — STATUS: PENDING**
-  - All drivers must be listed and approved on the policy
-  - **If not completed, the booking will be cancelled**
-  - Complete via RVShare dashboard immediately
-  - Reservation #12076232
-
 ---
 
 ## 🟠 HIGH PRIORITY — Do Before May 2026
-
-- [ ] **⚠️ RVShare Payment 2 of 2 — Was Due May 7, 2026 — CONFIRM PAID**
-  - Amount: $1,282.83
-  - Was scheduled to auto-charge on May 7. Verify it went through on RVShare dashboard.
-  - If not paid, contact RVShare immediately — booking may be at risk.
 
 - [ ] **America the Beautiful Annual Pass ($80) or 7-Day Pass ($35)**
   - Covers the Suburban + everyone inside for all NPS sites
@@ -51,10 +34,6 @@
 ---
 
 ## 🟡 IMPORTANT — Do Before June 2026
-
-- [ ] **RVShare Security Deposit — Due June 4, 2026**
-  - $500 credit card hold, 48 hours before check-in
-  - Collected automatically by RVShare — ensure card has headroom
 
 - [ ] **Bike Rental Research — Carriage Roads**
   - 45 miles of motor-free crushed gravel roads perfect for biking
@@ -147,6 +126,10 @@
 
 ## ✅ ALREADY DONE
 
+- [x] RVShare Security Deposit paid ($500)
+- [x] Whale Watch Tour tickets booked
+- [x] RVShare Insurance & Protection confirmed
+- [x] RVShare Payment 2 of 2 paid ($1,282.83)
 - [x] RVShare Booking — 2025 Coachmen Freedom Express Select 29SE (Res. #12076232)
 - [x] KOA Bar Harbor / Oceanside — June 8–12, Oceans Edge site (Res. #21555510)
 - [x] RVShare Payment 1 of 2 — $1,524.59 paid

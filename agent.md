@@ -262,11 +262,4 @@ This folder contains all project files. Use them as context and update them as n
 * **Camp Vistas:** Strongly desire camping right on the water/ocean for immediate access to tide pools and beautiful vistas (cliffs overlooking the ocean). Moving the RV a few times to get these prime spots is fully approved.
 * **Moose Photography:** A detailed field guide is available in the Moose Guide tab of the webapp and in `Informatinoal_files/Moose photography deep-research-report (2).md`. Priority locations: Lazy Tom Bog (#1), Kokadjo (#2), Prong Pond (#3), Lily Bay State Park (#4), West Shirley Bog (#5).
 
----
 
-## Remaining To-Do Items
-
-- [ ] **Book Cadillac Summit Vehicle Reservation:** 30% open 90 days out (March 2026), 70% open 2 days prior at 10 AM EST via Recreation.gov.
-- [ ] **Book Puffin & Whale Watch Tour:** Bar Harbor Whale Watch Co. — book early before June spots sell out.
-- [ ] **Pack black fly gear:** Head nets, DEET repellent, long sleeves, lightweight gloves — essential for moose photography sessions.
-- [ ] **Camera prep for moose photography:** Window-mounted beanbag, extra batteries, large memory cards, 100-500mm or 150-600mm lens.
