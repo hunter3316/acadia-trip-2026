@@ -191,8 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateProgress() {
-        const allItems = document.querySelectorAll('.todo-item:not(.completed) .todo-check:not(:disabled)');
-        const allCheckable = document.querySelectorAll('.todo-check:not(:disabled)');
+        const allItems = document.querySelectorAll('#tab-todo .todo-item:not(.completed) .todo-check:not(:disabled)');
+        const allCheckable = document.querySelectorAll('#tab-todo .todo-check:not(:disabled)');
         const checked = Array.from(allCheckable).filter(cb => cb.checked).length;
         const total = allCheckable.length;
         const fill = document.getElementById('todo-progress-fill');
@@ -259,4 +259,33 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCountdown();
     setInterval(updateCountdown, 60000);
 
+
+
+    // ===================== PACKING CHECKLIST PERSISTENCE =====================
+    const CHECKLIST_STORAGE_KEY = 'acadia-checklist-state';
+
+    function loadChecklistState() {
+        try { return JSON.parse(localStorage.getItem(CHECKLIST_STORAGE_KEY)) || {}; } catch { return {}; }
+    }
+
+    function saveChecklistState(state) {
+        localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(state));
+    }
+
+    const savedChecklistState = loadChecklistState();
+    document.querySelectorAll('#tab-checklist .checklist-item[data-id]').forEach(item => {
+        const id = item.dataset.id;
+        const cb = item.querySelector('.checklist-check');
+        if (!cb || cb.disabled) return;
+        if (savedChecklistState[id]) {
+            cb.checked = true;
+            item.classList.add('completed');
+        }
+        cb.addEventListener('change', () => {
+            const state = loadChecklistState();
+            state[id] = cb.checked;
+            saveChecklistState(state);
+            item.classList.toggle('completed', cb.checked);
+        });
+    });
 });
