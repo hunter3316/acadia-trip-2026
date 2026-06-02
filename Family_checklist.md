@@ -1,12 +1,13 @@
 # Trip Packing List
 
 ## Clothes (Layers)
+
 * Swim Wear
 * Light Coat
+* Rain coat
 * Water Shoes
-* Hiking
-* Sneakers
-* Back Pacs
+* Hiking shoes or Sneakers
+* Back Packs if desired
 * Water Pac
 * Underwear
 * Socks
@@ -16,7 +17,8 @@
 * Hats
 
 ## Electronics
-* Kindel
+
+* Kindle
 * Head Phones
 * Computer
 * Phone
@@ -24,39 +26,59 @@
 * Camera Gear
 
 ## Linens
-* Sheets
-* Blacket
-* Sleepy Bag?
-* Pillow
+
+* Sheets (if desired)
+* Blaket (if desired)
+* Sleepy Bag (if desired)
+* Pillow (if desired)
 * Towels
-* Wash Cloth ?
+* Wash Cloth
 
 ## Toiletries
-* Shampoo 
+
+* Shampoo
 * Conditioner
 * Tooth Paste
 * brush
-* deoderat
-* CPAP
-* Bonine
+* deodorant
+* CPAP (for David)
+* Bonnie (for human)
 * Dog Diapers
 
 ## Kitchen
-*(Purchas Food in Vermont)*
+
+*(Purchas Food in Bar Harbor)*
+
 * Dish Soap
 * Ziploc Bags
 * Paper towels
 * Tin foil
 * Paper Plates
 * Plasticwear
-* water bottels
+* water bottles (From Cruisee)
+* K-cup coffee maker
 * buffalo trace k cups
 * Camping Bin (thermometer)
 * Leatherman
-* Cooler ?
+* Small Cooler
+
+
+## Dog supplies
+* Kennel
+* Diapers
+* 1 Brush
+* Dog food
+* 6 ft Leash/ expandable too
+* Treats
+* Water and food bowel
+* Travel water container/Travel Bowel
 
 ## Other
-* Camping Chairs
+
+* Camping Chairs (for all 6 of us)
 * Flash lights
-* Jackery
-* Games small
+* Jackery (new one)
+* Games small ones
+
+
+
